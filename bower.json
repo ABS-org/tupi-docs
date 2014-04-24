@@ -1,0 +1,11 @@
+{
+  "name": "tupi-docs",
+  "version": "0.0.1",
+  "homepage": "https://abs-org.github.io/tupi-docs",
+  "description": "Tupi documentation",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "tupi": "~0.0.51"
+  }
+}
