@@ -28,31 +28,6 @@ module.exports = function (grunt) {
     },
 
     /************************************
-     * grunt-contrib-watch
-     * Watch some files and tasks
-     ************************************/
-    watch: {
-      html: {
-        files: '/**/*.html',
-        options: {
-          livereload: true
-        }
-      },
-      stylesheets: {
-        files: '/css/**/*.css',
-        options: {
-          livereload: true
-        }
-      },
-      javascripts: {
-        files: '/js/**/*.js',
-        options: {
-          livereload: true
-        }
-      }
-    },
-
-    /************************************
      * grunt-bump
      * Bump package version, create tag, commit, push...
      ************************************/
@@ -88,6 +63,6 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', ['shell:deployDocs']);
 
   // Default task
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['jekyll']);
 
 };
