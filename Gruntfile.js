@@ -23,7 +23,7 @@ module.exports = function (grunt) {
         command : 'jekyll serve --baseurl "" --w'
       },
       deployDocs : {
-        command: 'git subtree push --prefix origin gh-pages'
+        command: 'git push origin gh-pages'
       }
     },
 
