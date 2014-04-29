@@ -12,6 +12,19 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     /************************************
+     * grunt-contrib-concat
+     * Concatenate files
+     ************************************/
+    concat: {
+      tupi: {
+        src: [
+          'bower_components/tupi/dist/tupi.min.js'
+        ],
+        dest: 'js/tupi.min.js'
+      }
+    },
+
+    /************************************
      * grunt-shell
      * Run shell commands
      ************************************/
