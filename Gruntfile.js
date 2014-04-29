@@ -18,7 +18,7 @@ module.exports = function (grunt) {
     concat: {
       tupi: {
         src: [
-          'bower_components/tupi/dist/tupi.min.js'
+          'bower_components/tupi/dist/js/tupi.min.js'
         ],
         dest: 'js/tupi.min.js'
       }
