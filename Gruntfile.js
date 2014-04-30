@@ -36,7 +36,7 @@ module.exports = function (grunt) {
         command : 'jekyll serve --baseurl "" --w'
       },
       deployDocs : {
-        command: 'git push origin gh-pages'
+        command: 'git checkout gh-pages && git merge master && git checkout master && git push'
       }
     },
 
