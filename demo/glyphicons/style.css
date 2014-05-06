@@ -1,0 +1,20 @@
+main {
+  padding: 2em;
+}
+ul.glyphicons-list li {
+  width: 110px;
+  height: 140px;
+  margin: 0 20px 10px 0;
+  padding: 10px;
+  background: #eee;
+  text-align: center;
+  float: left;
+  list-style: none;
+}
+ul.glyphicons-list li:hover {
+  background: #47a3da;
+  color: #fff;
+}
+ul.glyphicons-list li span.glyphicon {
+  font-size: 2em;
+}
