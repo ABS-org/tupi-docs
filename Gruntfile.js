@@ -25,6 +25,47 @@ module.exports = function (grunt) {
     },
 
     /************************************
+     * grunt-contrib-watch
+     * Watch some files and tasks
+     ************************************/
+    watch: {
+      html: {
+        files: '*.html',
+        options: {
+          livereload: true
+        }
+      },
+      stylesheets: {
+        files: '/css/**/*.css',
+        tasks: ['dist-css'],
+        options: {
+          livereload: true
+        }
+      },
+      javascripts: {
+        files: '/js/**/*.js',
+        tasks: ['dist-js'],
+        options: {
+          livereload: true
+        }
+      }
+    },
+
+    /************************************
+     * grunt-contrib-connect
+     * Start a connect web server
+     ************************************/
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          open: true,
+          livereload: true
+        }
+      }
+    },
+
+    /************************************
      * grunt-shell
      * Run shell commands
      ************************************/
@@ -75,7 +116,10 @@ module.exports = function (grunt) {
   // Deploy task
   grunt.registerTask('deploy', ['shell:deployDocs']);
 
+  // Server task
+  grunt.registerTask('server', ['connect', 'watch']);
+
   // Default task
-  grunt.registerTask('default', ['jekyll']);
+  grunt.registerTask('default', ['server']);
 
 };
