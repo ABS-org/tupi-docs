@@ -12,6 +12,22 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     /************************************
+     * grunt-sass
+     * Compile SCSS to CSS using node-sass
+     ************************************/
+    sass: {
+      prod: {
+        options: {
+          includePaths: ['scss/base/', 'scss/component', 'scss/custom'],
+          outputStyle: 'compressed'
+        },
+        files: {
+          'css/style.min.css': 'scss/build.scss'
+        }
+      }
+    },
+
+    /************************************
      * grunt-contrib-concat
      * Concatenate files
      ************************************/
@@ -36,7 +52,7 @@ module.exports = function (grunt) {
         }
       },
       stylesheets: {
-        files: '/css/**/*.css',
+        files: 'scss/**/*.scss',
         tasks: ['dist-css'],
         options: {
           livereload: true
@@ -110,6 +126,9 @@ module.exports = function (grunt) {
   // Displays the execution time of grunt tasks
   require('time-grunt')(grunt);
 
+  // Dist task
+  grunt.registerTask('dist-css', ['sass:prod'])
+
   // Jekyll task
   grunt.registerTask('jekyll', ['shell:jekyll']);
 
@@ -120,6 +139,6 @@ module.exports = function (grunt) {
   grunt.registerTask('server', ['connect', 'watch']);
 
   // Default task
-  grunt.registerTask('default', ['server']);
+  grunt.registerTask('default', ['dist-css', 'server']);
 
 };
