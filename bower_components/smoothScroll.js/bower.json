@@ -1,0 +1,17 @@
+{
+  "name": "smoothScroll.js",
+  "main": "smoothScroll.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/cferdinandi/smooth-scroll",
+  "authors": [
+    "Chris Ferdinandi <https://github.com/cferdinandi>"
+  ],
+  "description": "Class helper for dots animations made by codrops.com",
+  "keywords": [
+    "scroll",
+    "smooth",
+    "animations"
+  ],
+  "license": "MIT",
+  "ignore": []
+}

@@ -1,0 +1,17 @@
+{
+  "name": "dots.js",
+  "main": "dots.js",
+  "version": "1.0.0",
+  "homepage": "http://danielfeelfine.github.io/dots.js",
+  "authors": [
+    "Codrops"
+  ],
+  "description": "Class helper for dots animations made by codrops.com",
+  "keywords": [
+    "dots",
+    "animations",
+    "codrops"
+  ],
+  "license": "MIT",
+  "ignore": []
+}

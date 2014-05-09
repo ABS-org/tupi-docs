@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Header Shrink</title>
+    <link rel="stylesheet" type="text/css" href="header-shrink.css" />
+
+    <style type="text/css">
+      body {
+        font-family: 'Helvetica', sans-serif;
+      }
+      .header-shrink {
+        height: 140px;
+        background: #f3efe0;
+        text-align: center;
+      }
+      .header-shrink-active {
+        height: 80px;
+        background: #1ECD97;
+      }
+      .my-section {
+        height: 100em;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <header class="header-shrink header-shrink-default">
+      <h1>Header Shrink</h1>
+    </header>
+
+    <section class="my-section"></section>
+
+    <script src="bower_components/classie/classie.js"></script>
+    <script src="header-shrink.js"></script>
+
+    <script>
+      headerShrink('.header-shrink', 'header-shrink-active' );
+    </script>
+
+  </body>
+</html>
