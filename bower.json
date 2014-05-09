@@ -6,6 +6,12 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "tupi": "~0.0.51"
+    "tupi": "~0.0.51",
+    "normalize.css": "~3.0.1",
+    "svgLoader.js": "~1.0.0",
+    "dots.js": "*",
+    "modernizr": "~2.8.1",
+    "smoothScroll.js": "*",
+    "header-shrink": "~1.1.0"
   }
 }
