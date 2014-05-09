@@ -1,0 +1,31 @@
+// Custom: scaffold
+// --------------------------
+body {
+  background: $beige-color;
+  color: darken($gray-color, 40%);
+  font-family: $font-opensans;
+}
+
+a {
+  color: darken($gray-color, 20%);
+  &:hover {
+    color: darken($gray-color, 40%);
+  }
+}
+
+.section {
+  height: 36em;
+  padding: 3.6em;
+  .main-title {
+    .small {
+      display: block;
+      font-weight: normal;
+      color: $gray-color;
+      font-size: 50%;
+    }
+  }
+  &#home {
+    padding-top: 13em;
+    text-align: center;
+  }
+}

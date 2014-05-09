@@ -1,0 +1,57 @@
+.header-shrink {
+  height: 80px;
+  background: $white-color;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  .main-title {
+    margin: 0;
+    background: $green-color;
+    color: $white-color;
+    font-size: 1.2em;
+    float: left;
+    padding: 23px 20px 23px 20px;
+    line-height: 35px;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+    &:hover {
+      background: lighten($green-color, 10%);
+      color: $white-color;
+    }
+  }
+  .nav {
+    float: right;
+  }
+  .nav .link {
+    color: $gray-color;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 0.8em;
+    padding: 15px;
+    line-height: 80px;
+    &:hover {
+      color: $green-color;
+    }
+  }
+  &.header-shrink-active {
+    height: 40px;
+    background: $green-color;
+    color: $white-color;
+    .main-title {
+      color: $white-color;
+      line-height: 0;
+      margin: -3px 0 0 0;
+      font-size: 90%;
+    }
+    .nav .link {
+      line-height: 40px;
+      color: $white-color;
+      &:hover {
+        background: $white-color;
+        color: $green-color;
+      }
+    }
+
+  }
+}
