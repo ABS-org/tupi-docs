@@ -18,25 +18,12 @@ module.exports = function (grunt) {
     sass: {
       prod: {
         options: {
-          includePaths: ['scss/base/', 'scss/component', 'scss/custom'],
+          includePaths: ['scss/custom'],
           outputStyle: 'compressed'
         },
         files: {
-          'css/style.min.css': 'scss/build.scss'
+          'css/styles.min.css': 'scss/build.scss'
         }
-      }
-    },
-
-    /************************************
-     * grunt-contrib-concat
-     * Concatenate files
-     ************************************/
-    concat: {
-      tupi: {
-        src: [
-          'bower_components/tupi/dist/js/tupi.min.js'
-        ],
-        dest: 'js/tupi.min.js'
       }
     },
 
