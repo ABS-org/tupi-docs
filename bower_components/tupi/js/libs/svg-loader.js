@@ -1,13 +1,4 @@
-/**
- * svgLoader.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2014, Codrops
- * http://www.codrops.com
- */
+/*jshint undef:false */
 ;( function( window ) {
 
 	'use strict';
@@ -31,10 +22,10 @@
 	SVGLoader.prototype.options = {
 		speedIn : 500,
 		easingIn : mina.linear
-	}
+	};
 
 	SVGLoader.prototype._init = function() {
-		var s = Snap( this.el.querySelector( 'svg' ) );
+		var s = new Snap( this.el.querySelector( 'svg' ) );
 		this.path = s.select( 'path' );
 		this.initialPath = this.path.attr('d');
 
@@ -56,7 +47,7 @@
 		if( !this.options.easingOut ) {
 			this.options.easingOut = this.options.easingIn;
 		}
-	}
+	};
 
 	SVGLoader.prototype.show = function() {
 		if( this.isAnimating ) return false;
@@ -68,7 +59,7 @@
 			};
 		this._animateSVG( 'in', onEndAnimation );
 		classie.add( this.el, 'show' );
-	}
+	};
 
 	SVGLoader.prototype.hide = function() {
 		var self = this;
@@ -79,7 +70,7 @@
 			classie.removeClass( self.el, 'show' );
 			self.isAnimating = false;
 		} );
-	}
+	};
 
 	SVGLoader.prototype._animateSVG = function( dir, callback ) {
 		var self = this,
@@ -90,7 +81,7 @@
 			easing = dir === 'out' ? self.options.easingOut : self.options.easingIn,
 			nextStep = function( pos ) {
 				if( pos > stepsTotal - 1 ) {
-					if( callback && typeof callback == 'function' ) {
+					if( callback && typeof callback === 'function' ) {
 						callback();
 					}
 					return;
@@ -100,7 +91,7 @@
 			};
 
 		nextStep(pos);
-	}
+	};
 
 	// add to global namespace
 	window.SVGLoader = SVGLoader;
