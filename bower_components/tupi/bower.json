@@ -1,6 +1,6 @@
 {
   "name": "tupi",
-  "version": "0.0.67",
+  "version": "0.0.99",
   "homepage": "https://github.com/ABS-org/tupi",
   "authors": [
     "Daniel Torres <danielfeelfine@gmail.com>",
@@ -30,9 +30,9 @@
     "docs"
   ],
   "dependencies": {
-    "classie": "~1.0.0",
-    "snap.svg": "~0.2.0",
+    "modernizr": "~2.8.1",
     "normalize.css": "~3.0.1",
-    "svgLoader.js": "~1.0.0"
+    "classie": "~1.0.0",
+    "snap.svg": "~0.2.0"
   }
 }

@@ -10,8 +10,6 @@ module.exports = function (grunt) {
     // Default Paths
     path: {
       bower: 'bower_components',
-      src: 'src',
-      dist: 'dist',
       tests: 'tests',
     },
 
@@ -29,71 +27,35 @@ module.exports = function (grunt) {
      * Clean files and folders
      ************************************/
     clean: {
-      dist: ['<%= path.dist %>/css']
+      dist: ['css/']
     },
 
     /************************************
-     * grunt-contrib-less
-     * LESS Task, compile and minify stylesheets
+     * grunt-sass
+     * Compile SCSS to CSS using node-sass
      ************************************/
-    less: {
-      compileCore: {
+    sass: {
+      options: {
+        includePaths: ['scss/base'],
+        outputStyle: 'nested'
+      },
+      components: {
         files: {
-          '<%= path.dist %>/css/tupi.css': '<%= path.src %>/less/build.less'
+          'css/component/dot-styles.css'         : 'scss/dot-styles.scss',
+          'css/component/page-overlay.css'       : 'scss/page-overlay.scss',
+          'css/component/timeline-vertical.css'  : 'scss/timeline-vertical.scss',
+          'css/component/header-shrink.css'      : 'scss/header-shrink.scss'
         }
       },
-      minify: {
-        options: {
-          cleancss: true,
-          report: 'min'
-        },
+      transition: {
         files: {
-          '<%= path.dist %>/css/tupi.min.css': '<%= path.dist %>/css/tupi.css'
+          'css/transition/img-caption.css'      : 'scss/transition/img-caption.scss'
         }
-      }
-    },
-
-    /************************************
-     * grunt-contrib-concat
-     * Concatenate files
-     ************************************/
-    concat: {
-      snapsvgPlugin: {
-        src: [
-          '<%= path.bower %>/snap.svg/dist/snap.svg.js'
-        ],
-        dest: '<%= path.dist %>/js/<%= pkg.name %>.snapsvg.js'
       },
-      svgloaderPlugin: {
-        src: [
-          '<%= path.bower %>/svgLoader.js/svgLoader.js'
-        ],
-        dest: '<%= path.dist %>/js/<%= pkg.name %>.svgloader.js'
-      },
-      classiePlugin: {
-        src: [
-          '<%= path.bower %>/classie/classie.js'
-        ],
-        dest: '<%= path.dist %>/js/<%= pkg.name %>.classie.js'
-      },
-      navigatorComponent: {
-        src: [
-          '<%= path.src %>/js/navigator.js'
-        ],
-        dest: '<%= path.dist %>/js/<%= pkg.name %>.navigator.js'
-      }
-    },
-
-    /************************************
-     * grunt-contrib-copy
-     * Copy files and folders to a destination path
-     ************************************/
-    copy: {
-      fonts: {
-        expand: true,
-        cwd: '<%= path.src %>/fonts/',
-        src: ['*.eot', '*.svg', '*.ttf', '*.woff'],
-        dest: '<%= path.dist %>/fonts/'
+      icons: {
+        files: {
+          'css/icon/linecons.css'                : 'scss/icon/linecons.scss'
+        }
       }
     },
 
@@ -103,9 +65,9 @@ module.exports = function (grunt) {
      ************************************/
     jshint: {
       options: {
-        jshintrc: '.jshintrc'
+        jshintrc: '<%= path.tests %>/.jshintrc'
       },
-      all: ['Gruntfile.js', '<%= path.src %>/js/**/*.js']
+      all: ['Gruntfile.js', 'js/**/*.js']
     },
 
     /************************************
@@ -114,13 +76,10 @@ module.exports = function (grunt) {
      ************************************/
     csslint: {
       options: {
-        csslintrc: '.csslintrc'
+        csslintrc: '<%= path.tests %>/.csslintrc'
       },
       strict: {
-        options: {
-          import: 2
-        },
-        src: ['<%= path.dist %>/css/tupi.css']
+        src: ['css/**/*.css']
       }
     },
 
@@ -134,8 +93,8 @@ module.exports = function (grunt) {
         banner: '<%= banner %>'
       },
       files: {
-        src: ['<%= path.dist %>/css/*.css',
-              '<%= path.dist %>/js/*.js']
+        src: ['css/**/*.css',
+              'js/**/*.js']
       }
     },
 
@@ -149,7 +108,7 @@ module.exports = function (grunt) {
         updateConfigs: [],
         commit: true,
         commitMessage: '%VERSION%',
-        commitFiles: ['package.json', 'bower.json', '<%= path.dist %>'], // '-a' for all files
+        commitFiles: ['package.json', 'bower.json', 'css/', 'js/'], // '-a' for all files
         createTag: true,
         tagName: '%VERSION%',
         tagMessage: '%VERSION%',
@@ -170,15 +129,13 @@ module.exports = function (grunt) {
   // Displays the execution time of grunt tasks
   require('time-grunt')(grunt);
 
-  // JS and CSS dist task
-  grunt.registerTask('dist-css', ['less']);
-  grunt.registerTask('dist-js', ['concat', 'copy']);
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'usebanner']);
+  // Prepare to push new version task
+  grunt.registerTask('newver', ['clean', 'usebanner']);
 
   // Test task
   grunt.registerTask('test', ['jshint', 'csslint']);
 
   // Default task
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('default', ['test', 'newver']);
 
 };
