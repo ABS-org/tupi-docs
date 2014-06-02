@@ -1,0 +1,102 @@
+.tabs {
+  width: 100%;
+  margin: 40px auto;
+  position: relative;
+  input {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 1000;
+    + label {
+      background: darken($color-white, 3%);
+    }
+    &:hover + label {
+      background: darken(#ebedf2, 0.5%);
+    }
+    &:checked + label {
+      background: darken(#ebedf2, 3.5%);
+      z-index: 6;
+    }
+  }
+  label {
+    width: 120px;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 0.8em;
+    top: 20px;
+    position: relative;
+    cursor: pointer;
+    color: darken(#ebedf2, 30%);
+    display: block;
+    text-align: right;
+    float: right;
+    clear: both;
+    border-color: darken(#ebedf2, 1%);
+    border-style: solid;
+    border-top-width: 1px;
+    border-left-width: 0;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+  }
+}
+
+.content {
+  width: 817px;
+  height: 30em;
+  margin: 0;
+  background: $color-white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.015);
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  div {
+    position: absolute;
+    top: 0;
+    padding: 10px 40px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+    -webkit-transform: translateX(-200%);
+    -moz-transform: translateX(-200%);
+    -o-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%);
+    h2,
+    h3 {
+      color: darken(#ebedf2, 30%);
+    }
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      text-align: left;
+      margin: 0;
+      color: darken(#ebedf2, 30%);
+    }
+  }
+}
+
+.tabs input.tab-selector-1:checked ~ .content .content-1,
+.tabs input.tab-selector-2:checked ~ .content .content-2,
+.tabs input.tab-selector-3:checked ~ .content .content-3,
+.tabs input.tab-selector-4:checked ~ .content .content-4 {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  z-index: 100;
+  opacity: 1;
+  -webkit-transition: all ease-out 0.3s 0.3s;
+  -moz-transition: all ease-out 0.3s 0.3s;
+  -o-transition: all ease-out 0.3s 0.3s;
+  -ms-transition: all ease-out 0.3s 0.3s;
+  transition: all ease-out 0.3s 0.3s;
+}
