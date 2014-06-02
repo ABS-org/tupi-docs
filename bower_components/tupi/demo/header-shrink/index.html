@@ -4,27 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Header Shrink</title>
-    <link rel="stylesheet" type="text/css" href="header-shrink.css" />
-
+    <link rel="shortcut icon" href="../../tupi-logo.png">
+    <title>Tupi - Header Shrink</title>
+    <link rel="stylesheet" type="text/css" href="../../css/component/header-shrink.css" />
     <style type="text/css">
       body {
         font-family: 'Helvetica', sans-serif;
+        font-size: 0.8em;
       }
       .header-shrink {
-        height: 140px;
-        background: #f3efe0;
+        height: 120px;
+        line-height: 60px;
+        background: #f2f2f2;
         text-align: center;
       }
       .header-shrink-active {
-        height: 80px;
-        background: #1ECD97;
+        height: 60px;
+        line-height: 30px;
+        background: #65b72f;
+        color: #fff;
       }
       .my-section {
         height: 100em;
       }
     </style>
-
   </head>
   <body>
 
@@ -34,8 +37,8 @@
 
     <section class="my-section"></section>
 
-    <script src="bower_components/classie/classie.js"></script>
-    <script src="header-shrink.js"></script>
+    <script src="../../bower_components/classie/classie.js" /></script>
+    <script src="../../js/header-shrink.js"></script>
 
     <script>
       headerShrink('.header-shrink', 'header-shrink-active' );
