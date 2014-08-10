@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "tupi": "~0.0.99"
+    "tupi": "0.1.0-alpha.2"
   },
   "devDependencies": {
   }
