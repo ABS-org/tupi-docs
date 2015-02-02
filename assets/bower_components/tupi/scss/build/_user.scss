@@ -1,0 +1,180 @@
+// People list
+//
+// --------------------------------
+
+.user-list-widget {
+  @include make-xs-column(6);
+  @include make-sm-column(6);
+  @include make-md-column(3);
+  @include make-lg-column(3);
+
+
+  // Widget item
+  .user-list-widget--item {
+    background: $brand-white;
+    margin-bottom: 25px;
+    padding: 9px 15px;
+    overflow: hidden;
+    border-radius: $border-radius-small;
+    @media (max-width: $screen-xs-max) {
+      width: 142px;
+      height: 300px;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      width: 206px;
+      height: 130px;
+      margin-left: -6px;
+      margin-bottom: 25px;
+      padding: 9px 15px;
+      .caption {
+        width: 108px;
+        float: right;
+      }
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      width: 142px;
+      height: 198px;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: 142px;
+      height: 216px;
+    }
+    /* hover */
+    &:hover {
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        background: lighten($gray-lighter, 2.5%);
+        .user-list-desc,
+        .user-list-name {
+          display: none;
+        }
+        .user-list-nav {
+          width: 108px;
+          display: block;
+          position: absolute;
+          top: 108px;
+          .btn-xs {
+            margin: 5px 0;
+            display: block;
+          }
+        }
+      }
+      @media (min-width: $screen-lg-min) {
+        background: lighten($gray-lighter, 2.5%);
+        .user-list-desc,
+        .user-list-name {
+          display: none;
+        }
+        .user-list-nav {
+          width: 108px;
+          display: block;
+          position: absolute;
+          top: 108px;
+          .btn-xs {
+            margin: 5px 0;
+            display: block;
+          }
+        }
+      }
+    }
+
+    // Image
+    .user-list-img {
+      @extend .img-circle;
+      background: $brand-white;
+      @media (max-width: $screen-xs-max) {
+        width: 65px;
+        height: 65px;
+        margin-left: 22px;
+      }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        float: left;
+        width: 60px;
+        height: 60px;
+        margin-left: 0;
+      }
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        width: 65px;
+        height: 65px;
+        margin-left: 22px;
+      }
+      @media (min-width: $screen-lg-min) {
+        width: 65px;
+        height: 65px;
+        margin-left: 22px;
+      }
+    }
+
+    // Name
+    .user-list-name {
+      font-size: $font-size-small;
+      font-weight: bold;
+      color: $brand-primary;
+      @media (max-width: $screen-xs-max) {
+        text-align: center;
+      }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        margin-top: 0;
+        text-align: left;
+      }
+      @media (min-width: $screen-lg-min) {
+        text-align: center;
+      }
+    }
+
+    // Description
+    .user-list-desc {
+      font-size: 12px;
+      @media (max-width: $screen-xs-max) {
+        font-size: $font-size-small;
+        margin-bottom: 10px;
+      }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        margin: -5px 0 8px 0;
+        font-size: ($font-size-small * 0.95);
+      }
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        .user-list-desc {
+          font-size: $font-size-small;
+          text-align: center;
+        }
+      }
+      @media (min-width: $screen-lg-min) {
+        font-size: $font-size-small;
+      }
+    }
+
+    // Buttons
+    .user-list-nav {
+      @media (max-width: $screen-xs-max) {
+        width: 108px;
+      }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        clear: both;
+        .btn-xs {
+          font-size: ($font-size-small * 0.9);
+        }
+      }
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        display: none;
+      }
+      @media (min-width: $screen-lg-min) {
+        display: none;
+      }
+      .user-list-btn--message,
+      .user-list-btn--follow,
+      .user-list-btn--add {
+        display: block;
+        margin: 5px 0;
+      }
+      .user-list-btn--message {
+        @extend .btn-warning-sm;
+      }
+      .user-list-btn--follow {
+        @extend .btn-primary-sm;
+      }
+      .user-list-btn--add {
+        @extend .btn-success-sm;
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+/*
+* Outline Icons
+*/
+
+
+// Variables
+// --------------------------
+
+$icons-outline-font-path:        "/bower_components/tupi/icon/outline" !default;
+//$icons-outline-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts" !default; // for referencing Bootstrap CDN font files directly
+$icons-outline-css-prefix:       icons-outline !default;
+$icons-outline-version:          "4.2.0" !default;
+$icons-outline-border-color:     #eee !default;
+$icons-outline-inverse:          #fff !default;
+$icons-outline-li-width:         (30em / 14) !default;
+
+// Mixins
+// --------------------------
+
+@mixin icons-outline-icon() {
+  display: inline-block;
+  font: normal normal normal 14px/1 icons-outline; // shortening font declaration
+  font-size: inherit; // can't have font-size inherit on line above, so need to override
+  text-rendering: auto; // optimizelegibility throws things off #1094
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icons-outline-icon-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: rotate($degrees);
+      -ms-transform: rotate($degrees);
+          transform: rotate($degrees);
+}
+
+@mixin icons-outline-icon-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+      -ms-transform: scale($horiz, $vert);
+          transform: scale($horiz, $vert);
+}
+
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'icons-outline';
+  src: url('#{$icons-outline-font-path}/icons-outline.eot?v=#{$icons-outline-version}');
+  src: url('#{$icons-outline-font-path}/icons-outline.eot?#iefix&v=#{$icons-outline-version}') format('embedded-opentype'),
+    url('#{$icons-outline-font-path}/icons-outline.woff?v=#{$icons-outline-version}') format('woff'),
+    url('#{$icons-outline-font-path}/icons-outline.ttf?v=#{$icons-outline-version}') format('truetype'),
+    url('#{$icons-outline-font-path}/icons-outline.svg?v=#{$icons-outline-version}#iconsoutlineregular') format('svg');
+  //src: url('#{$icons-outline-font-path}/IconsOutline.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Base Class Definition
+// -------------------------
+
+.#{$icons-outline-css-prefix} {
+  display: inline-block;
+  font: normal normal normal 14px/1 icons-outline; // shortening font declaration
+  font-size: inherit; // can't have font-size inherit on line above, so need to override
+  text-rendering: auto; // optimizelegibility throws things off #1094
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Icon Sizes
+// -------------------------
+
+/* makes the font 33% larger relative to the icon container */
+.#{$icons-outline-css-prefix}-lg {
+  font-size: (4em / 3);
+  line-height: (3em / 4);
+  vertical-align: -15%;
+}
+.#{$icons-outline-css-prefix}-2x { font-size: 2em; }
+.#{$icons-outline-css-prefix}-3x { font-size: 3em; }
+.#{$icons-outline-css-prefix}-4x { font-size: 4em; }
+.#{$icons-outline-css-prefix}-5x { font-size: 5em; }
+
+// Fixed Width Icons
+// -------------------------
+.#{$icons-outline-css-prefix}-fw {
+  width: (18em / 14);
+  text-align: center;
+}
+
+// List Icons
+// -------------------------
+
+.#{$icons-outline-css-prefix}-ul {
+  padding-left: 0;
+  margin-left: $icons-outline-li-width;
+  list-style-type: none;
+  > li { position: relative; }
+}
+.#{$icons-outline-css-prefix}-li {
+  position: absolute;
+  left: -$icons-outline-li-width;
+  width: $icons-outline-li-width;
+  top: (2em / 14);
+  text-align: center;
+  &.#{$icons-outline-css-prefix}-lg {
+    left: -$icons-outline-li-width + (4em / 14);
+  }
+}
+
+// Bordered & Pulled
+// -------------------------
+
+.#{$icons-outline-css-prefix}-border {
+  padding: .2em .25em .15em;
+  border: solid .08em $icons-outline-border-color;
+  border-radius: .1em;
+}
+
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+.#{$icons-outline-css-prefix} {
+  &.pull-left { margin-right: .3em; }
+  &.pull-right { margin-left: .3em; }
+}
+
+// Spinning Icons
+// --------------------------
+
+.#{$icons-outline-css-prefix}-spin {
+  -webkit-animation: icons-outline-spin 2s infinite linear;
+          animation: icons-outline-spin 2s infinite linear;
+}
+
+@-webkit-keyframes icons-outline-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes icons-outline-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+// Rotated & Flipped Icons
+// -------------------------
+
+.#{$icons-outline-css-prefix}-rotate-90  { @include icons-outline-icon-rotate(90deg, 1);  }
+.#{$icons-outline-css-prefix}-rotate-180 { @include icons-outline-icon-rotate(180deg, 2); }
+.#{$icons-outline-css-prefix}-rotate-270 { @include icons-outline-icon-rotate(270deg, 3); }
+
+.#{$icons-outline-css-prefix}-flip-horizontal { @include icons-outline-icon-flip(-1, 1, 0); }
+.#{$icons-outline-css-prefix}-flip-vertical   { @include icons-outline-icon-flip(1, -1, 2); }
+
+// Hook for IE8-9
+// -------------------------
+
+:root .#{$icons-outline-css-prefix}-rotate-90,
+:root .#{$icons-outline-css-prefix}-rotate-180,
+:root .#{$icons-outline-css-prefix}-rotate-270,
+:root .#{$icons-outline-css-prefix}-flip-horizontal,
+:root .#{$icons-outline-css-prefix}-flip-vertical {
+  filter: none;
+}
+
+// Stacked Icons
+// -------------------------
+
+.#{$icons-outline-css-prefix}-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.#{$icons-outline-css-prefix}-stack-1x, .#{$icons-outline-css-prefix}-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.#{$icons-outline-css-prefix}-stack-1x { line-height: inherit; }
+.#{$icons-outline-css-prefix}-stack-2x { font-size: 2em; }
+.#{$icons-outline-css-prefix}-inverse { color: $icons-outline-inverse; }
+
+// Unicode Icons
+// -------------------------
+@import "icons";

@@ -1,0 +1,294 @@
+/**
+*
+* Button
+*
+**/
+/*
+.button {
+  display: inline-block;
+
+  text-align: center;
+
+  font-family: 'Open Sans';
+  font-weight: 600;
+  text-decoration: none;
+
+  outline: 0;
+  cursor: pointer;
+
+  transition: none;
+
+  a { color: #fff; }
+
+  &:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+.button-md {
+  font-size: 14px;
+  padding: 2px 14px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  min-height: 20px;
+}
+.button-sm {
+  font-size: 12px;
+  padding: 0 14px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  height: 22px;
+  line-height: 20px;
+}
+
+// Mixin to create buttons
+@mixin style-button($color, $textColor, $isInverted: false) {
+
+  background: $color;
+  color: $textColor;
+  border: 1px solid darken($color, 2.5%);
+  border-radius: 3px;
+
+  @if $isInverted { border-color: transparent;}
+
+  &:hover {
+    background: lighten($color, 5%);
+    border: 1px solid lighten($color, 5%);
+  }
+}
+
+.btn-primary {
+  @extend .button;
+  @include style-button(#227fbc, #ffffff);
+}
+
+.btn-primary-sm {
+  @extend .btn-primary;
+  @extend .button-sm;
+}
+
+.btn-primary-md {
+  @extend .btn-primary;
+  @extend .button-md;
+}
+
+.btn-secondary {
+  @extend .button;
+  @include style-button(#ffffff, #fff);
+}
+
+.btn-secondary-sm {
+  @extend .btn-secondary;
+  @extend .button-sm;
+}
+
+.btn-secondary-md {
+  @extend .btn-secondary;
+  @extend .button-md;
+}
+
+.btn-success {
+  @extend .button;
+  @include style-button($brand-success, #ffffff);
+}
+
+.btn-success-sm {
+  @extend .btn-success;
+  @extend .button-sm;
+}
+
+.btn-success-md {
+  @extend .btn-success;
+  @extend .button-md;
+}
+
+.btn-success-md-full {
+  @extend .btn-success;
+  @extend .button-md;
+  width: 100%;
+}
+
+.btn-info {
+  @extend .button;
+  @include style-button($brand-success, #ffffff);
+}
+
+.btn-info-sm {
+  @extend .btn-info;
+  @extend .button-sm;
+}
+
+.btn-info-md {
+  @extend .btn-info;
+  @extend .button-md;
+}
+
+.btn-warning {
+  @extend .button;
+  @include style-button($brand-warning, #ffffff);
+}
+
+.btn-warning-sm {
+  @extend .btn-warning;
+  @extend .button-sm;
+}
+
+.btn-warning-md {
+  @extend .btn-warning;
+  @extend .button-md;
+}
+
+.btn-danger {
+  @extend .button;
+  @include style-button($brand-danger, #ffffff);
+}
+
+.btn-danger-sm {
+  @extend .btn-danger;
+  @extend .button-sm;
+}
+
+.btn-danger-md {
+  @extend .btn-danger;
+  @extend .button-md;
+}
+
+.btn-gray {
+  @extend .button;
+  @include style-button($gray-lighter, $gray-lighter);
+  border: none;
+  &:hover {
+    border: none;
+  }
+}
+
+.btn-love {
+  @extend .btn-danger;
+  @extend .button-md;
+  padding: 8px 10px 0 10px;
+  .icons-outline-love {
+    font-size: 1.5em;
+  }
+  .cdp-love {
+    font-size: 1.5em;
+  }
+}
+
+.btn-post-camera {
+  @extend .btn-gray;
+  @extend .button-md;
+  position: relative;
+  top: 2px;
+  padding: 4px 8px 0 8px;
+  height: 32px;
+  .icons-outline-photographic-camera {
+    font-size: 1.65em;
+    color: $gray-light;
+  }
+}
+
+.btn-post-sound {
+  @extend .btn-gray;
+  @extend .button-md;
+  position: relative;
+  top: 2px;
+  padding: 4px 8px 0 8px;
+  height: 32px;
+  .icons-outline-sound-on {
+    font-size: 1.65em;
+    color: $color-people;
+  }
+}
+
+.btn-post-movie {
+  @extend .btn-gray;
+  @extend .button-md;
+  position: relative;
+  top: 2px;
+  padding: 4px 8px 0 8px;
+  height: 32px;
+  .icons-outline-videomaker {
+    font-size: 1.65em;
+    color: $brand-danger;
+  }
+}
+
+.btn-post-file {
+  @extend .btn-gray;
+  @extend .button-md;
+  position: relative;
+  top: 2px;
+  padding: 4px 8px 0 8px;
+  height: 32px;
+  .icons-outline-paper-plus {
+    font-size: 1.65em;
+    color: $brand-primary;
+  }
+}
+
+.btn-post-link {
+  @extend .btn-gray;
+  @extend .button-md;
+  position: relative;
+  top: 2px;
+  padding: 4px 8px 0 8px;
+  height: 32px;
+  .icons-outline-link {
+    font-size: 1.65em;
+    color: $brand-success;
+  }
+}
+
+.btn-post-share {
+  @extend .btn-gray;
+  @extend .button-md;
+  position: relative;
+  top: 2px;
+  padding: 4px 8px 0 8px;
+  height: 32px;
+  .icons-outline-share {
+    font-size: 1.65em;
+    color: $gray-light;
+  }
+}
+
+/*.btn-link {
+  @extend .button;
+  @include style-button($brand-success, #ffffff);
+}*/
+
+/*
+.btn-link-sm {
+  @extend .btn-link;
+  @extend .button-sm;
+}
+
+.btn-link-md {
+  @extend .btn-link;
+  @extend .button-md;
+}
+
+
+.form-post {
+  background: #fff;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  .textarea {
+    transition: all 0.2s linear;
+    height: 60px;
+    &:hover {
+      transition: all 0.2s linear;
+      height: 120px;
+    }
+  }
+  .btn-group-right {
+    float: right;
+    .btn-primary-md {
+      position: relative;
+      top: -4px;
+    }
+  }
+}
+*/

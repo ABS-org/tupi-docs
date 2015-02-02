@@ -1,0 +1,49 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  //@include make-row;
+  font-size: 0.9em;
+  color: $gray-light;
+  padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+  margin-bottom: 30px; //$line-height-computed
+  list-style: none;
+  background-color: transparent;
+  border-bottom: 1px solid #d4d4d4;
+  opacity: 0.75;
+  font-weight: bold;
+
+  &:hover { opacity: 1; }
+
+  > li {
+    display: inline-block;
+
+    a {
+      color: #8a8a8a;
+      text-decoration: none;
+      &:hover {
+        color: $breadcrumb-active-color;
+        text-decoration: underline;
+      }
+    }
+
+    + li:before {
+      content: "#{$breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 5px;
+      color: $breadcrumb-color;
+    }
+  }
+
+  .breadcrumb-icon {
+    margin: 0 6px 0 0;
+    font-size: 18px;
+    vertical-align: middle;
+    @extend .cdp;
+    @extend .cdp-question;
+  }
+  > .active {
+    color: $breadcrumb-active-color;
+  }
+}

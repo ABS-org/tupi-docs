@@ -1,0 +1,187 @@
+
+.collapse-blocks {
+  @include make-row;
+  margin: 40px 0;
+  height: auto;
+  .panel-group {
+    @include make-xs-column(4);
+    @include make-sm-column(4);
+    @include make-md-column(4);
+    @include make-lg-column(4);
+  }
+  .block-collapse {
+    width: 100%;
+    .panel-heading {
+      height:240px;
+      &.groups_bg {
+        background: #3591de;
+        .fa-circle {
+          color: #3185b5;
+        }
+        .cdp-cdp-logo {
+          font-size: 40px;
+          position: relative;
+          top: -8px;
+          left: 1px;
+        }
+      }
+      &.story_bg {
+        background: $brand-success;
+        .fa-circle {
+          color: darken($brand-success, 10%);
+        }
+        .cdp-report {
+          font-size: 65px;
+          position: absolute;
+          top: 5px;
+          left: 1px;
+        }
+      }
+      &.people_bg {
+        background: $brand-warning;
+        .fa-circle {
+          color: #f2c157;
+        }
+        .cdp-people {
+          font-size: 38px;
+          position: relative;
+          top: -8px;
+          left: 1px;
+        }
+      }
+      .cdp-inverse {
+        color: $brand-white;
+      }
+      color: $brand-white;
+      @media (max-width: $screen-xs-max) {
+        height: 180px;
+      }
+      .panel-title {
+        .panel-title--icon {
+          @include make-xs-column(12);
+          @include make-sm-column(4);
+          @include make-sm-column-offset(4);
+          @include make-md-column(4);
+          @include make-md-column-offset(4);
+          @include make-lg-column(4);
+          @include make-lg-column-offset(4);
+          @extend .fa-stack;
+          font-size: 2.25em;
+          margin-top: 30px;
+          @media (max-width: $screen-xs-max) {
+            font-size: 28px;
+            margin-top: 0;
+          }
+        }
+        .collapse-trigger {
+          text-decoration: none;
+          .icons-outline-skip-previous,
+          .icons-outline-skip-next {
+            position: relative;
+            top: 115px;
+            left: 140px;
+            color: $brand-white;
+            opacity: 0.8;
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+            transform: rotate(90deg);
+          }
+          .icons-outline-skip-previous {
+            display: block;
+          }
+          .icons-outline-skip-next {
+            display: none;
+          }
+          &.collapsed {
+            .icons-outline-skip-previous {
+              display: none;
+            }
+            .icons-outline-skip-next {
+              display: block;
+            }
+          }
+        }
+      }
+      .block-collapse--title {
+        text-align: center;
+        margin: 16px 0;
+        padding: 30px 50px;
+        font-size: 46px;
+        color: #fff;
+        @media (max-width: $screen-xs-max) {
+          font-size: 20px;
+          text-align: left;
+          margin: 20px 0;
+          padding: 0;
+        }
+        .block-collapse--title-small {
+          font-size: 14px;
+          color: $brand-white;
+          display: block;
+          @media (max-width: $screen-xs-max) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .block-collapse--subtitle {
+      margin: 0 0 15px 0;
+      padding: 0 25px;
+      font-size: 15px;
+      font-weight: normal;
+      text-align: center;
+      display: block;
+      color: #a1a1a1;
+      .block-collapse--subtitle-small {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        color: $brand-primary;
+        line-height: 18px;
+        margin: 5px 0 20px 0;
+      }
+    }
+    .panel-collapse {
+      @media (max-width: $screen-xs-max) {
+        display: none;
+      }
+    }
+    .block-collapse--list {
+      list-style: none;
+      padding: 0;
+      .block-collapse--list-item {
+        height: 60px;
+        margin-top: -1px;
+        .block-collapse--list-item-img {
+          @extend .img-circle;
+          width: 35px;
+          height: 35px;
+          margin: 10px 0;
+          float: left;
+        }
+        .block-collapse--list-item-text {
+          width: 260px;
+          height: 60px;
+          padding: 10px 0;
+          border-top: 1px solid $gray-lighter;
+          border-bottom: 1px solid $gray-lighter;
+          float: right;
+          margin-top: -1px;
+          .block-collapse--list-item-text--title {
+            line-height: 0;
+            margin: 5px 0;
+          }
+          .block-collapse--list-item-text--description {
+            line-height: 12px;
+            margin: 8px 0;
+          }
+          .block-collapse--list-item-text--title,
+          .block-collapse--list-item-text--description {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

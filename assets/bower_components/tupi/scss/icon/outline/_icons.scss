@@ -1,0 +1,331 @@
+/*
+* CdP Icons
+*/
+
+
+// A
+$icons-outline-var-arrows-in:                    "\e028";
+$icons-outline-var-arrows-out:                   "\e025";
+$icons-outline-var-arrows-in-1:                  "\e061";
+$icons-outline-var-arrow-up:                     "\e063";
+$icons-outline-var-arrow-right:                  "\e064";
+$icons-outline-var-arrow-left:                   "\e067";
+$icons-outline-var-arrow-down:                   "\e068";
+$icons-outline-var-arrow-go-out:                 "\e075";
+$icons-outline-var-arrow-return:                 "\e077";
+$icons-outline-var-arrow-split:                  "\e081";
+$icons-outline-var-approved:                     "\e052";
+$icons-outline-var-attach:                       "\e079";
+
+.#{$icons-outline-css-prefix}-arrows-in:before                    { content: $icons-outline-var-arrows-in; }
+.#{$icons-outline-css-prefix}-arrows-out:before                   { content: $icons-outline-var-arrows-out; }
+.#{$icons-outline-css-prefix}-arrows-in-1:before                  { content: $icons-outline-var-arrows-in-1; }
+.#{$icons-outline-css-prefix}-arrow-up:before                     { content: $icons-outline-var-arrow-up; }
+.#{$icons-outline-css-prefix}-arrow-right:before                  { content: $icons-outline-var-arrow-right; }
+.#{$icons-outline-css-prefix}-arrow-left:before                   { content: $icons-outline-var-arrow-left; }
+.#{$icons-outline-css-prefix}-arrow-down:before                   { content: $icons-outline-var-arrow-down; }
+.#{$icons-outline-css-prefix}-arrow-go-out:before                 { content: $icons-outline-var-arrow-go-out; }
+.#{$icons-outline-css-prefix}-arrow-return:before                 { content: $icons-outline-var-arrow-return; }
+.#{$icons-outline-css-prefix}-arrow-split:before                  { content: $icons-outline-var-arrow-split; }
+.#{$icons-outline-css-prefix}-approved:before                     { content: $icons-outline-var-approved; }
+.#{$icons-outline-css-prefix}-attach:before                       { content: $icons-outline-var-attach; }
+
+// B
+$icons-outline-var-battery:                "\e01f";
+$icons-outline-var-bag:                    "\e023";
+$icons-outline-var-book:                   "\e00f";
+$icons-outline-var-blob:                   "\e03a";
+$icons-outline-var-bell:                   "\e01e";
+$icons-outline-var-box:                    "\e010";
+$icons-outline-var-bookmark:               "\e07b";
+$icons-outline-var-backward:               "\e06c";
+
+.#{$icons-outline-css-prefix}-battery:before                 { content: $icons-outline-var-battery; }
+.#{$icons-outline-css-prefix}-bag:before                     { content: $icons-outline-var-bag; }
+.#{$icons-outline-css-prefix}-book:before                    { content: $icons-outline-var-book; }
+.#{$icons-outline-css-prefix}-blob:before                    { content: $icons-outline-var-blob; }
+.#{$icons-outline-css-prefix}-bell:before                    { content: $icons-outline-var-bell; }
+.#{$icons-outline-css-prefix}-box:before                     { content: $icons-outline-var-box; }
+.#{$icons-outline-css-prefix}-bookmark:before                { content: $icons-outline-var-bookmark; }
+.#{$icons-outline-css-prefix}-backward:before                { content: $icons-outline-var-backward; }
+
+// C
+$icons-outline-var-circles:                    "\e00d";
+$icons-outline-var-comment:                    "\e012";
+$icons-outline-var-circle-forbidden:           "\e022";
+$icons-outline-var-close:                      "\e036";
+$icons-outline-var-circles-two:                "\e038";
+$icons-outline-var-circle-go-out:              "\e03c";
+$icons-outline-var-command:                    "\e046";
+$icons-outline-var-columns:                    "\e047";
+$icons-outline-var-cloud-up:                   "\e049";
+$icons-outline-var-cloud-down:                 "\e04a";
+$icons-outline-var-cloud:                      "\e04b";
+$icons-outline-var-clock:                      "\e04c";
+$icons-outline-var-clipboard:                  "\e04d";
+$icons-outline-var-circle-less:                "\e04e";
+$icons-outline-var-circle-close:               "\e04f";
+$icons-outline-var-circle-approved:            "\e050";
+$icons-outline-var-circle-plus:                "\e051";
+$icons-outline-var-cursor-move:                "\e069";
+$icons-outline-var-circle:                     "\e072";
+
+.#{$icons-outline-css-prefix}-circles:before                   { content: $icons-outline-var-circles; }
+.#{$icons-outline-css-prefix}-comment:before                   { content: $icons-outline-var-comment; }
+.#{$icons-outline-css-prefix}-circle-forbidden:before          { content: $icons-outline-var-circle-forbidden; }
+.#{$icons-outline-css-prefix}-close:before                     { content: $icons-outline-var-close; }
+.#{$icons-outline-css-prefix}-circles-two:before               { content: $icons-outline-var-circles-two; }
+.#{$icons-outline-css-prefix}-circle-go-out:before             { content: $icons-outline-var-circle-go-out; }
+.#{$icons-outline-css-prefix}-command:before                   { content: $icons-outline-var-command; }
+.#{$icons-outline-css-prefix}-columns:before                   { content: $icons-outline-var-columns; }
+.#{$icons-outline-css-prefix}-cloud-up:before                  { content: $icons-outline-var-cloud-up; }
+.#{$icons-outline-css-prefix}-cloud-down:before                { content: $icons-outline-var-cloud-down; }
+.#{$icons-outline-css-prefix}-cloud:before                     { content: $icons-outline-var-cloud; }
+.#{$icons-outline-css-prefix}-clock:before                     { content: $icons-outline-var-clock; }
+.#{$icons-outline-css-prefix}-clipboard:before                 { content: $icons-outline-var-clipboard; }
+.#{$icons-outline-css-prefix}-circle-less:before               { content: $icons-outline-var-circle-less; }
+.#{$icons-outline-css-prefix}-circle-close:before              { content: $icons-outline-var-circle-close; }
+.#{$icons-outline-css-prefix}-circle-approved:before           { content: $icons-outline-var-circle-approved; }
+.#{$icons-outline-css-prefix}-circle-plus:before               { content: $icons-outline-var-circle-plus; }
+.#{$icons-outline-css-prefix}-cursor-move:before               { content: $icons-outline-var-cursor-move; }
+.#{$icons-outline-css-prefix}-circle:before                    { content: $icons-outline-var-circle; }
+
+// D
+$icons-outline-var-download-open:            "\e01d";
+$icons-outline-var-download:                 "\e039";
+$icons-outline-var-database:                 "\e07e";
+
+.#{$icons-outline-css-prefix}-download-open:before               { content: $icons-outline-var-download-open; }
+.#{$icons-outline-css-prefix}-download:before                    { content: $icons-outline-var-download; }
+.#{$icons-outline-css-prefix}-database:before                    { content: $icons-outline-var-database; }
+
+// E
+$icons-outline-var-ellipsis:                "\e03b";
+$icons-outline-var-eye:                     "\e03e";
+
+.#{$icons-outline-css-prefix}-ellipsis:before               { content: $icons-outline-var-ellipsis; }
+.#{$icons-outline-css-prefix}-eye:before                    { content: $icons-outline-var-eye; }
+
+// F
+$icons-outline-var-forward:                 "\e000";
+$icons-outline-var-folder:                  "\e034";
+$icons-outline-var-flag:                    "\e035";
+$icons-outline-var-fork:                    "\e055";
+
+.#{$icons-outline-css-prefix}-forward:before                   { content: $icons-outline-var-forward; }
+.#{$icons-outline-css-prefix}-folder:before                    { content: $icons-outline-var-folder; }
+.#{$icons-outline-css-prefix}-flag:before                      { content: $icons-outline-var-flag; }
+.#{$icons-outline-css-prefix}-fork:before                      { content: $icons-outline-var-fork; }
+
+// G
+$icons-outline-var-globe:                     "\e033";
+$icons-outline-var-graphic-pizza:             "\e070";
+$icons-outline-var-go-out:                    "\e074";
+.#{$icons-outline-css-prefix}-globe:before                      { content: $icons-outline-var-globe; }
+.#{$icons-outline-css-prefix}-graphic-pizza:before              { content: $icons-outline-var-graphic-pizza; }
+.#{$icons-outline-css-prefix}-go-out:before                     { content: $icons-outline-var-go-out; }
+
+// H
+$icons-outline-var-help:                     "\e02e";
+.#{$icons-outline-css-prefix}-help:before                      { content: $icons-outline-var-help; }
+
+// I
+
+// J
+
+// K
+
+// L
+$icons-outline-var-label:                   "\e00e";
+$icons-outline-var-loading:                 "\e019";
+$icons-outline-var-link:                    "\e01a";
+$icons-outline-var-lines:                   "\e026";
+$icons-outline-var-letter:                  "\e02c";
+$icons-outline-var-love:                    "\e02f";
+$icons-outline-var-label-close:             "\e037";
+
+.#{$icons-outline-css-prefix}-label:before            { content: $icons-outline-var-label; }
+.#{$icons-outline-css-prefix}-loading:before          { content: $icons-outline-var-loading; }
+.#{$icons-outline-css-prefix}-link:before             { content: $icons-outline-var-link; }
+.#{$icons-outline-css-prefix}-lines:before            { content: $icons-outline-var-lines; }
+.#{$icons-outline-css-prefix}-letter:before           { content: $icons-outline-var-letter; }
+.#{$icons-outline-css-prefix}-love:before             { content: $icons-outline-var-love; }
+.#{$icons-outline-css-prefix}-label-close:before      { content: $icons-outline-var-label-close; }
+
+// M
+$icons-outline-var-microphone:            "\e027";
+$icons-outline-var-map:                   "\e02b";
+$icons-outline-var-moon:                  "\e066";
+
+.#{$icons-outline-css-prefix}-microphone:before           { content: $icons-outline-var-microphone; }
+.#{$icons-outline-css-prefix}-map:before                  { content: $icons-outline-var-map; }
+.#{$icons-outline-css-prefix}-moon:before                 { content: $icons-outline-var-moon; }
+
+// N
+
+// O
+$icons-outline-var-outline-08:                 "\e053";
+.#{$icons-outline-css-prefix}-outline-08:before             { content: $icons-outline-var-outline-08; }
+
+// P
+$icons-outline-var-padlock-open:             "\e008";
+$icons-outline-var-padlock-closed:           "\e016";
+$icons-outline-var-picture:                  "\e02d";
+$icons-outline-var-paper-less:               "\e040";
+$icons-outline-var-paper-plus:               "\e041";
+$icons-outline-var-paper:                    "\e042";
+$icons-outline-var-photographic-camera:      "\e057";
+$icons-outline-var-printer:                  "\e06a";
+$icons-outline-var-plus:                     "\e06e";
+$icons-outline-var-play:                     "\e06f";
+$icons-outline-var-paper-lines:              "\e078";
+$icons-outline-var-paragraph:                "\e07d";
+$icons-outline-var-pause:                    "\e07f";
+$icons-outline-var-pointer:                  "\e018";
+$icons-outline-var-power-off:                "\e06b";
+
+.#{$icons-outline-css-prefix}-padlock-open:before            { content: $icons-outline-var-padlock-open; }
+.#{$icons-outline-css-prefix}-padlock-closed:before          { content: $icons-outline-var-padlock-closed; }
+.#{$icons-outline-css-prefix}-picture:before                 { content: $icons-outline-var-picture; }
+.#{$icons-outline-css-prefix}-paper-less:before              { content: $icons-outline-var-paper-less; }
+.#{$icons-outline-css-prefix}-paper-plus:before              { content: $icons-outline-var-paper-plus; }
+.#{$icons-outline-css-prefix}-paper:before                   { content: $icons-outline-var-paper; }
+.#{$icons-outline-css-prefix}-photographic-camera:before     { content: $icons-outline-var-photographic-camera; }
+.#{$icons-outline-css-prefix}-printer:before                 { content: $icons-outline-var-printer; }
+.#{$icons-outline-css-prefix}-plus:before                    { content: $icons-outline-var-plus; }
+.#{$icons-outline-css-prefix}-play:before                    { content: $icons-outline-var-play; }
+.#{$icons-outline-css-prefix}-paper-lines:before             { content: $icons-outline-var-paper-lines; }
+.#{$icons-outline-css-prefix}-paragraph:before               { content: $icons-outline-var-paragraph; }
+.#{$icons-outline-css-prefix}-pause:before                   { content: $icons-outline-var-pause; }
+.#{$icons-outline-css-prefix}-pointer:before                 { content: $icons-outline-var-pointer; }
+.#{$icons-outline-css-prefix}-power-off:before               { content: $icons-outline-var-power-off; }
+
+
+// Q
+
+// R
+$icons-outline-var-rectagle-front:          "\e07c";
+$icons-outline-var-refresh:                 "\e076";
+$icons-outline-var-reload:                  "\e073";
+
+.#{$icons-outline-css-prefix}-rectagle-front:before           { content: $icons-outline-var-rectagle-front; }
+.#{$icons-outline-css-prefix}-refresh:before                  { content: $icons-outline-var-refresh; }
+.#{$icons-outline-css-prefix}-reload:before                   { content: $icons-outline-var-reload; }
+
+// S
+$icons-outline-var-square:                 "\e006";
+$icons-outline-var-square-less:            "\e002";
+$icons-outline-var-square-over:            "\e003";
+$icons-outline-var-square-front:           "\e004";
+$icons-outline-var-star:                   "\e005";
+$icons-outline-var-sun:                    "\e007";
+$icons-outline-var-switch:                 "\e00b";
+$icons-outline-var-stack:                  "\e01c";
+$icons-outline-var-square-in:              "\e043";
+$icons-outline-var-suitcase:               "\e011";
+$icons-outline-var-square-dotted-less:     "\e024";
+$icons-outline-var-square-plus:            "\e013";
+$icons-outline-var-square-approved:        "\e014";
+$icons-outline-var-square-close:           "\e015";
+$icons-outline-var-square-dotted-plus:     "\e029";
+$icons-outline-var-square-dotted:          "\e02a";
+$icons-outline-var-squares-in:             "\e031";
+$icons-outline-var-squares-out:            "\e032";
+$icons-outline-var-square-out:             "\e03d";
+$icons-outline-var-share:                  "\e080";
+$icons-outline-var-search:                 "\e082";
+$icons-outline-var-skip-previous:          "\e07a";
+$icons-outline-var-sound-off:              "\e071";
+$icons-outline-var-screen-front:           "\e065";
+$icons-outline-var-sound-on:               "\e05f";
+$icons-outline-var-screen-back:            "\e05e";
+$icons-outline-var-skip-next:              "\e03f";
+$icons-outline-var-settings:               "\e048";
+
+.#{$icons-outline-css-prefix}-square:before                  { content: $icons-outline-var-square; }
+.#{$icons-outline-css-prefix}-square-less:before             { content: $icons-outline-var-square-less; }
+.#{$icons-outline-css-prefix}-square-over:before             { content: $icons-outline-var-square-over; }
+.#{$icons-outline-css-prefix}-square-front:before            { content: $icons-outline-var-square-front; }
+.#{$icons-outline-css-prefix}-star:before                    { content: $icons-outline-var-star; }
+.#{$icons-outline-css-prefix}-sun:before                     { content: $icons-outline-var-sun; }
+.#{$icons-outline-css-prefix}-switch:before                  { content: $icons-outline-var-switch; }
+.#{$icons-outline-css-prefix}-stack:before                   { content: $icons-outline-var-stack; }
+.#{$icons-outline-css-prefix}-square-in:before               { content: $icons-outline-var-square-in; }
+.#{$icons-outline-css-prefix}-suitcase:before                { content: $icons-outline-var-suitcase; }
+.#{$icons-outline-css-prefix}-square-dotted-less:before      { content: $icons-outline-var-square-dotted-less; }
+.#{$icons-outline-css-prefix}-square-plus:before             { content: $icons-outline-var-square-plus; }
+.#{$icons-outline-css-prefix}-square-approved:before         { content: $icons-outline-var-square-approved; }
+.#{$icons-outline-css-prefix}-square-close:before            { content: $icons-outline-var-square-close; }
+.#{$icons-outline-css-prefix}-square-dotted-plus:before      { content: $icons-outline-var-square-dotted-plus; }
+.#{$icons-outline-css-prefix}-square-dotted:before           { content: $icons-outline-var-square-dotted; }
+.#{$icons-outline-css-prefix}-squares-in:before              { content: $icons-outline-var-squares-in; }
+.#{$icons-outline-css-prefix}-squares-out:before             { content: $icons-outline-var-squares-out; }
+.#{$icons-outline-css-prefix}-square-out:before              { content: $icons-outline-var-square-out; }
+.#{$icons-outline-css-prefix}-share:before                   { content: $icons-outline-var-share; }
+.#{$icons-outline-css-prefix}-search:before                  { content: $icons-outline-var-search; }
+.#{$icons-outline-css-prefix}-skip-previous:before           { content: $icons-outline-var-skip-previous; }
+.#{$icons-outline-css-prefix}-sound-off:before               { content: $icons-outline-var-sound-off; }
+.#{$icons-outline-css-prefix}-screen-front:before            { content: $icons-outline-var-screen-front; }
+.#{$icons-outline-css-prefix}-sound-on:before                { content: $icons-outline-var-sound-on; }
+.#{$icons-outline-css-prefix}-screen-back:before             { content: $icons-outline-var-screen-back; }
+.#{$icons-outline-css-prefix}-skip-next:before               { content: $icons-outline-var-skip-next; }
+.#{$icons-outline-css-prefix}-settings:before                { content: $icons-outline-var-settings; }
+
+// T
+$icons-outline-var-trash:                    "\e00a";
+$icons-outline-var-thermometer:              "\e00c";
+$icons-outline-var-target:                   "\e017";
+$icons-outline-var-text-right:               "\e056";
+$icons-outline-var-text-left:                "\e059";
+$icons-outline-var-text-justify:             "\e05a";
+$icons-outline-var-text-center:              "\e05d";
+$icons-outline-var-trace:                    "\e062";
+
+.#{$icons-outline-css-prefix}-trash:before           { content: $icons-outline-var-trash; }
+.#{$icons-outline-css-prefix}-thermometer:before     { content: $icons-outline-var-thermometer; }
+.#{$icons-outline-css-prefix}-target:before          { content: $icons-outline-var-target; }
+.#{$icons-outline-css-prefix}-text-right:before      { content: $icons-outline-var-text-right; }
+.#{$icons-outline-css-prefix}-text-left:before       { content: $icons-outline-var-text-left; }
+.#{$icons-outline-css-prefix}-text-justify:before    { content: $icons-outline-var-text-justify; }
+.#{$icons-outline-css-prefix}-text-center:before     { content: $icons-outline-var-text-center; }
+.#{$icons-outline-css-prefix}-trace:before           { content: $icons-outline-var-trace; }
+
+// U
+$icons-outline-var-upload:                  "\e001";
+$icons-outline-var-umbrella:                "\e009";
+$icons-outline-var-user:                    "\e030";
+
+.#{$icons-outline-css-prefix}-upload:before           { content: $icons-outline-var-upload; }
+.#{$icons-outline-css-prefix}-umbrella:before         { content: $icons-outline-var-umbrella; }
+.#{$icons-outline-css-prefix}-user:before             { content: $icons-outline-var-user; }
+
+// V
+$icons-outline-var-volume-growing:         "\e021";
+$icons-outline-var-volume-run:             "\e020";
+$icons-outline-var-view-left:              "\e044";
+$icons-outline-var-view-right:             "\e045";
+$icons-outline-var-videomaker:             "\e060";
+
+.#{$icons-outline-css-prefix}-volume-growing:before           { content: $icons-outline-var-volume-growing; }
+.#{$icons-outline-css-prefix}-volume-run:before               { content: $icons-outline-var-volume-run; }
+.#{$icons-outline-css-prefix}-view-left:before                { content: $icons-outline-var-view-left; }
+.#{$icons-outline-css-prefix}-view-right:before               { content: $icons-outline-var-view-right; }
+.#{$icons-outline-css-prefix}-videomaker:before               { content: $icons-outline-var-videomaker; }
+
+// W
+$icons-outline-var-wifi:                     "\e06b";
+$icons-outline-var-watch:                    "\e05c";
+$icons-outline-var-water-anchor:             "\e054";
+$icons-outline-var-window:                   "\e01b";
+
+.#{$icons-outline-css-prefix}-wifi:before               { content: $icons-outline-var-wifi; }
+.#{$icons-outline-css-prefix}-watch:before              { content: $icons-outline-var-watch; }
+.#{$icons-outline-css-prefix}-water-anchor:before       { content: $icons-outline-var-water-anchor; }
+.#{$icons-outline-css-prefix}-window:before             { content: $icons-outline-var-window; }
+
+// Z
+$icons-outline-var-zoom-less:                    "\e058";
+$icons-outline-var-zoom-plus:                    "\e05b";
+
+.#{$icons-outline-css-prefix}-zoom-less:before           { content: $icons-outline-var-zoom-less; }
+.#{$icons-outline-css-prefix}-zoom-plus:before           { content: $icons-outline-var-zoom-plus; }

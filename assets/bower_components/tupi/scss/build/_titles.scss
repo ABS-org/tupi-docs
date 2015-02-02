@@ -1,0 +1,123 @@
+
+@mixin header-brand {
+  height: 70px;
+  padding: 0;
+  .header-brand-icon {
+    width: 66px;
+    float: left;
+    font-size: 26px;
+    // Hack for solve specific icon inconsistence
+    .cdp-stack-1x {
+      font-size: 1.5em;
+      position: relative;
+      top: 14px;
+      left: 7px;
+    }
+    .fa-circle {
+      font-size: 3em;
+    }
+  }
+  .header-brand-text {
+    @include make-lg-column(10);
+    font-family: $font-family-secondary;
+    .header-brand-text--title {
+      font-size: 24px;
+      font-weight: bold;
+      position: relative;
+      top: -6px;
+    }
+    .header-brand-text--small {
+      font-size: 16px;
+      color: $gray;
+      position: relative;
+      top: -32px;
+    }
+  }
+}
+
+
+.header-brand--people {
+  @include header-brand;
+  .header-brand-icon {
+    color: $color-people;
+  }
+  .header-brand-text--title {
+    color: $color-people;
+  }
+}
+
+.header-brand--group {
+  @include header-brand;
+  .header-brand-icon {
+    color: $color-group;
+  }
+  .header-brand-text--title {
+    color: $color-group;
+  }
+}
+
+.header-brand--messages {
+  @include header-brand;
+  .header-brand-icon {
+    color: $brand-cool;
+  }
+  .header-brand-text--title {
+    color: $brand-cool;
+  }
+}
+
+.header-brand--courses {
+  @include header-brand;
+  .header-brand-icon {
+    color: $color-course;
+  }
+  .header-brand-text--title {
+    color: $color-course;
+  }
+}
+
+.header-brand--story {
+  @include header-brand;
+  .header-brand-icon {
+    color: $brand-story;
+  }
+  .header-brand-text--title {
+    height: 40px;
+    color: $brand-story;
+  }
+  .header-brand-icon {
+    .cdp-stack-1x {
+      font-size: 2.5em;
+      top: 16px;
+      left: 2px;
+    }
+  }
+}
+
+.header-brand--notifications {
+  @include header-brand;
+  .header-brand-icon {
+    color: $color-notification;
+  }
+  .header-brand-text--title {
+    color: $color-notification;
+  }
+}
+
+.header-brand--services {
+  @include header-brand;
+  .header-brand-icon {
+    color: lighten($brand-primary, 10%);
+  }
+  .header-brand-text--title {
+    height: 40px;
+    color: lighten($brand-primary, 10%);
+  }
+  .header-brand-icon {
+    .cdp-stack-1x {
+      font-size: 2.5em;
+      top: 16px;
+      left: 2px;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+// Info Blocks
+//
+// ------------------------------
+
+.info-blocks {
+  @include make-row;
+  height: 500px;
+  .info-blocks--blog {
+    @include make-xs-column(6);
+    @include make-sm-column(8);
+    @include make-md-column(8);
+    @include make-lg-column(8);
+    .info-blocks--blog-header {
+      @include make-lg-column(12);
+    }
+    .info-blocks--blog-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: $brand-primary;
+      margin-bottom: 26px;
+      @media (max-width: $screen-xs-max) {
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+      @media (min-width: $screen-sm-min) {
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+      .info-blocks--blog-subtitle {
+        display: block;
+        font-size: 18px;
+        color: $gray;
+        margin: 8px 0;
+        @media (max-width: $screen-xs-max) {
+          font-size: 14px;
+        }
+        @media (min-width: $screen-sm-min) {
+          font-size: 14px;
+        }
+        @media (min-width: $screen-md-min) {
+          font-size: 16px;
+        }
+      }
+    }
+    .info-blocks--blog-content {
+      @include make-xs-column(12);
+      @include make-sm-column(6);
+      @include make-md-column(6);
+      @include make-lg-column(6);
+      .info-blocks--blog-content-img {
+        width: 356px;
+        height: 175px;
+        border-radius: 3px;
+        @extend .img-responsive;
+        @media (max-width: $screen-xs-max) {
+          height: 115px;
+        }
+        @media (min-width: $screen-sm-min) {
+          height: 115px;
+        }
+        @media (min-width: $screen-md-min) {
+          height: 145px;
+        }
+      }
+      .info-blocks--blog-content-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: $brand-primary;
+        @media (max-width: $screen-xs-max) {
+          font-size: 18px;
+        }
+        @media (min-width: $screen-sm-min) {
+          font-size: 18px;
+        }
+        @media (min-width: $screen-md-min) {
+          font-size: 20px;
+        }
+      }
+      .info-blocks--blog-content-description {
+        font-size: 17px;
+        color: lighten($gray, 5%);
+        @media (max-width: $screen-xs-max) {
+          font-size: 13px;
+        }
+        @media (min-width: $screen-sm-min) {
+          font-size: 13px;
+        }
+        @media (min-width: $screen-md-min) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .info-blocks--help_center {
+    @include make-xs-column(6);
+    @include make-sm-column(4);
+    @include make-md-column(4);
+    @include make-lg-column(4);
+    .info-blocks--help_center-title {
+      font-size: 32px;
+      color: $brand-success;
+      margin-bottom: 26px;
+      font-weight: bold;
+      @media (min-width: $screen-sm-min) {
+        font-size: 26px;
+      }
+      .info-blocks--help_center-subtitle {
+        font-size: 18px;
+        color: $gray;
+        display: block;
+        margin-top: 8px;
+        @media (min-width: $screen-md-min) {
+          font-size: 16px;
+        }
+      }
+    }
+    .info-blocks--help_center-content {
+      height: 110px;
+      margin-bottom: 15px;
+      .info-blocks--help_center-question {
+        font-size: 18px;
+        line-height: 25px;
+      }
+      .info-blocks--help_center-content-img {
+        .info-blocks--help_center-content-img--item {
+          @extend .img-circle;
+          width: 100px;
+          height: 100px;
+          padding: 0;
+          @media (max-width: $screen-xs-max) {
+            border-radius: 3px;
+          }
+        }
+      }
+      .info-blocks--help_center-content-description {
+        font-size: 17px;
+        color: lighten($gray, 5%);
+        @media (min-width: $screen-md-min) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

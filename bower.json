@@ -1,0 +1,28 @@
+{
+  "name": "tupi-docs",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ABS-org/tupi",
+  "authors": [
+    "Daniel Torres <danielfeelfine@gmail.com>"
+  ],
+  "description": "Coleção de estilos e componentes reutilizáveis.",
+  "keywords": [
+    "estilos",
+    "components",
+    "coleções"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.yml",
+    "*.md",
+    "package.json",
+    "node_modules",
+    "bower_components",
+    "tests",
+    "docs"
+  ],
+  "dependencies": {
+    "tupi": "0.1.67"
+  }
+}

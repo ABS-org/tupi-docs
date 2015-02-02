@@ -1,0 +1,226 @@
+//
+// Chat
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.messenger-area-wrapper {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0px;
+  right: 50px;
+  visibility: hidden;
+  width: 100%;
+  z-index: 3;
+  .header {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .messenger-column {
+    height: 500px;
+    width: 250px;
+    margin: 0px 5px;
+    float: right;
+    div {
+      visibility: visible;
+    }
+  }
+  avatar img {
+    width: 30px;
+    height: 30px;
+  }
+  .createdAt {
+    color: #999999;
+    font-size: 0.75em;
+    margin: 2px;
+    text-align: left;
+  }
+}
+
+div.messenger-area {
+  bottom: 0px;
+  position: absolute;
+  .action-bar {
+    padding: 3px;
+    color: #999;
+    background-color: #fff;
+  }
+  .messenger {
+    background-color: #fff;
+    padding-bottom: 5px;
+  }
+}
+
+.contact-chat {
+  width: 250px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  .header {
+    background-color: #314e5b;
+    color: #fff;
+  }
+  .actions {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    .btn-close {
+      font-size: 1.25em;
+      line-height: 1.7em;
+      background: transparent;
+      color: #fff;
+    }
+  }
+  .messages {
+    height: 200px;
+    padding: 0;
+    overflow-y: scroll;
+    background: #fff;
+    .message {
+      border-bottom: 1px solid darken(#eee, 5%);
+      padding: 8px;
+      &:hover {
+        background: lighten(#eee, 5%);
+      }
+      &:last-child {
+        border: none;
+      }
+      .avatar-small {
+        img {
+          width: 30px;
+          height: 30px;
+          @extend .img-circle;
+        }
+      }
+      .message {
+        background: transparent;
+        display: block;
+        width: 200px;
+        float: right;
+        border: none;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: -10px;
+        position: relative;
+        top: -5px;
+      }
+      &.sending {
+        background-color: #FFFFAC;
+      }
+      &.send {
+        background-color: #56c07a;
+      }
+      &.error {
+        background-color: #FF6630;
+      }
+    }
+  }
+  .message-footer {
+    width: 100%;
+    padding-left: 40px;
+    clear: right;
+    .createdAt {
+      font-size: 11px;
+    }
+  }
+  .footer {
+    border-top: 1px solid #ddd;
+    background: lighten(#eee, 2.5%);
+    padding: 0;
+    input {
+      width: 192px;
+      height: 28px;
+      font-size: 12px;
+      background: lighten(#eee, 2.5%);
+      border: none;
+      padding-left: 6px;
+      &:focus{
+        outline: 0;
+      }
+    }
+    .btn {
+      width: 53px;
+      font-size: 11px;
+      height: 25px;
+      background: transparent;
+      border-radius: 0;
+      &:hover {
+        color: lighten($gray, 5%);
+      }
+    }
+  }
+}
+
+
+.messenger {
+  .contact avatar img {
+    width: 40px;
+    height: 40px;
+  }
+  .contact-list {
+    .contact {
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        &:hover {
+          text-decoration: none;
+          background-color: #eee;
+        }
+      }
+    }
+  }
+  .rooms-list {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .header {
+    background-color: #314e5b;
+    color: #fff;
+    width: 240px;
+  }
+}
+
+div.messenger-area .messenger {
+  .friendlist {
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  .search-area {
+    margin: 0;
+    input {
+      width: 100%;
+      font-size: 12px;
+      padding-left: 6px;
+      height: 28px;
+      margin-bottom: -4px;
+      border: none;
+      border-top: 1px solid #ddd;
+      color: #ccc;
+      background: lighten(#eee, 2.5%);
+      &:focus { outline: 0; }
+    }
+  }
+}
+
+div.messenger-off {
+  background-color: #314e5b;
+  color: #fff;
+  width: 240px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  .ui-icon-person {
+    float: left;
+    vertical-align: middle;
+  }
+  .text {
+
+  }
+}

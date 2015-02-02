@@ -1,0 +1,174 @@
+
+.content {
+  background: #fff;
+  padding: 0 0 30px;
+  position: relative;
+  top: -70px;
+  .paragraph {
+    font-family: 'Open Sans', sans-serif;
+  }
+  .header {
+    background: #eff4f7;
+    box-shadow: none;
+    height: 80px;
+    padding: 15px 0 15px 0;
+    h1 {
+      border-right: 2px solid #d9e5ed;
+      padding: 20px;
+      margin-right: 20px;
+    }
+    h2 {
+      padding: 10px 0;
+    }
+  }
+}
+
+article.content {overflow: hidden;}
+.nobg {background: none; border: none;}
+
+article h1 {
+  font-size: 2em;
+  font-weight: 500;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+article h1 + h2 {
+  font-weight: 300;
+  font-size: 1.4em;
+}
+
+article h2 {
+  font-weight: 500;
+  padding: 20px 0 10px;
+}
+
+article h3 {
+  font-weight: 500;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+article h4 {
+  font-weight: normal;
+  padding-top: 15px;
+}
+
+article p {
+  font-weight: 500;
+  font-size: 0.9em;
+  line-height: 23px;
+  margin-bottom: 15px;
+  color: rgba(0,0,0,0.7);
+}
+
+
+article img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.box li,
+article li {
+  line-height: 23px;
+  font-weight: 500;
+  font-size: 0.9em;
+  color: rgba(0,0,0,0.7);
+}
+
+article p,
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+article ul {
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+article ul li {padding-left: 0  }
+
+article pre {margin: 20px 0; overflow-x: auto}
+
+p code {
+  font-weight: bold;
+  font-family: courier, sans-serif;
+}
+
+#questions {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: -600px;
+  margin: 0 0 0 -285px;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+#questions:target {
+  opacity: 1;
+  top: 121px;
+}
+
+.example {
+  background: #EFEFEF;
+  border: 1px solid #CCC;
+  margin: 20px 0;
+  padding: 25px 0;
+}
+
+.example h1 {
+  margin: 0;
+  padding: 0 20px;
+}
+dl {
+  overflow: hidden;
+  padding: 0 20px;
+}
+dt {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+}
+dd {
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 20px;
+  padding: 15px 20px 0px;
+}
+dd p {
+  padding-left: 0;
+  padding-right: 0;
+}
+hr {
+  color: rgba(0,0,0,0.15);
+  margin: 20px 0;
+}
+
+.footer {
+  background: transparent;
+  padding: 0 !important;
+}
+
+.lnk-fork {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  z-index: 1;
+}
+
+.small-right {
+  font-size: 11px;
+  text-align: right;
+  float: right;
+}

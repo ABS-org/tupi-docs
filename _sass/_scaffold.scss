@@ -1,0 +1,69 @@
+
+/**
+* Scaffold
+* --------------------------------------------------
+* Scaffold of application
+*/
+
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: 'Lato', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  background: url(../../assets/img/bg.jpg);
+}
+
+.limit {max-width: 900px; margin: 0 auto;}
+
+header  {
+  padding: 40px 0 100px;
+  overflow: hidden;
+  color: #314e5a;
+  position: relative;
+  .limit {
+    position: relative;
+    overflow: hidden;
+  }
+  h1 {
+    a {
+      color: #314e5a;
+      text-decoration: none;
+    }
+    img { max-width: 100%; }
+    small {
+      float: right;
+      font-size: 16px;
+      font-weight: 300;
+      padding: 20px 0 0;
+      opacity: 0.8;
+    }
+    &.title {
+      font-weight: 500;
+      max-width: 310px;
+      float: left;
+    }
+    &.logo {
+      max-width: 310px;
+      float: left;
+    }
+  }
+}
+
+.btn {
+  background: #01afec;
+  border-radius: 3px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin: 20px auto 0;
+  width: 180px;
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  &:hover { opacity: 0.9; }
+}
