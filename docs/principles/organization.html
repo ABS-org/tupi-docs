@@ -1,0 +1,69 @@
+---
+layout: interna
+title: Organização
+---
+{% include submenu-principles.html %}
+
+<article class="content">
+  <h1>Organização dos Arquivos</h1>
+
+  <p class="paragraph">
+    Organização de código é uma importante parte de qualquer base de código CSS, e crucial para grandes bases de código. Separar logicamente distintas partes do código. Abstrair partes comuns de código em variáveis para cor, tipografia, etc.
+  </p>
+
+  <p class="paragraph">
+    Iremos nos basear nos princípios abaixo para manter a uniformidade na organização:
+  </p>
+
+  <p class="paragraph">
+    A <strong>base</strong> irá conter todo elemento básico que será distribuído nas demais partes da aplicação. Ex.: mixins, grid, tipografia, padrão de botões, ícones etc.
+  </p>
+
+  <p class="paragraph">
+    A parte de <strong>estilos</strong> contém especificamente aspectos relacionados ao o visual. Nesse contexto, podemos ter um slider ou accordion, com seus mecanismos, ações, javascript etc, mas com um estilo específico. Assim, o slider da Home pode ter um estilo diferente de um outro slider na seção de usuários ou comunidades, por exemplo.
+  </p>
+
+  <p class="paragraph">
+    Em <strong>componentes</strong> está o CSS referente aos componentes que usam javascript. Ex.: slider, tabs etc.
+  </p>
+
+  <p class="paragraph">
+    Na raiz deve conter apenas o arquivo de variáveis e o arquivo para build.
+  </p>
+
+  <p class="paragraph">
+    Segue o esquema ilustrado abaixo:
+  </p>
+
+  <div class="box-code">
+    <ul>
+      <li>base/</li>
+        <ul>
+          <li>mixins.scss</li>
+          <li>grid.scss</li>
+          <li>icons/</li>
+          <ul>
+            <li>icons-outline/</li>
+            <li>icons-other/</li>
+          </ul>
+          <li>...</li>
+        </ul>
+      <li>styles/</li>
+        <ul>
+          <li>slider-home.scss</li>
+          <li>accordion-users.scss</li>
+          <li>...</li>
+        </ul>
+      <li>components/</li>
+        <ul>
+          <li>slider.scss</li>
+          <li>accordion.scss</li>
+          <li>tabs.scss</li>
+          <li>...</li>
+        </ul>
+      <li>_variables.scss</li>
+      <li>build.scss</li>
+    </ul>
+  </div>
+
+</article>
