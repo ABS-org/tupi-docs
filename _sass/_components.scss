@@ -239,7 +239,8 @@
 #tabs--formatting,
 #tabs--comments,
 #tabs--exceptions,
-#tabs--declaration-order {
+#tabs--declaration-order,
+#tabs--class-and-variables {
   @extend .tabs;
 }
 #tabs--blank-spaces {
@@ -252,15 +253,18 @@
   height: 380px;
 }
 #tabs--exceptions {
-  height: 350px;
+  height: 360px;
 }
 #tabs--declaration-order {
   height: 480px;
 }
+#tabs--class-and-variables {
+  height: 420px;
+}
 
 .box-code {
   margin: 25px 20px 25px 20px;
-  padding-bottom: 50px;
+  padding: 25px 0;
   background: #f5f8fa;
   font-weight: normal;
 }
