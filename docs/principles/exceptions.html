@@ -1,0 +1,48 @@
+---
+layout: interna
+title: Exceções
+---
+{% include submenu-principles.html %}
+
+<article class="content">
+  <h1>Exceções</h1>
+
+  <p class="paragraph">
+    Algumas exceções devem ocorrer em situações específicas, elas estão descritas abaixo:s
+  </p>
+
+  <ul>
+    <li>Grandes blocos de declarações individuais podem atuar de forma diferente, através da formatação de linha única. Nesse caso, um espaço deve ser considerado depois da abertura das chaves e antes do fechamento das chaves.</li>
+    <li>Usar valores de cor em hexadecimal, porém se houver necessidade de opacidade, usar RGBA.</li>
+    <li>Comentários em uma linha após a propriedade ou no meio da classe, são permitidos conforme o modelo</li>
+  </ul>
+
+  <div id="tabs--exceptions">
+
+    <div class="tab">
+      <input type="radio" id="tab--exceptions--css" name="tabs--exceptions" checked>
+      <label for="tab--exceptions--css">CSS</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-scss linenums">
+/* Comentários no meio da classe */
+.class {
+  height: 200px;
+  overflow: auto; // Comentário básico de uma linha
+}
+
+/* Elementos com apenas uma propridade */
+.class { width: 10%; }
+.class { width: 20%; }
+.class { width: 30%; }
+
+/* Uso de RGBA, quando há necessidade de opacidade */
+.class {
+  background: rgba(255, 255, 255, 0.75); // Opacity only in background
+}
+        </pre>
+      </div>
+    </div>
+  </div>
+
+</article>
