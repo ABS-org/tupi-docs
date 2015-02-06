@@ -1,0 +1,64 @@
+---
+layout: interna
+title: Gerais
+---
+{% include submenu-principles.html %}
+
+<article class="content">
+
+  <h1>Espaços em Branco</h1>
+  <p class="paragraph">Use espaços em branco para melhorar a legibilidade. Todo o código deve ser uniforme então nada de misturar tabulação com espaços.</p>
+  <p class="paragraph">Iremos manter o uso de <strong>02 espaços</strong> para identação, tanto no markup (HTML, .hbs) quanto no CSS/SCSS.</p>
+  <p class="paragraph">Espaços em branco devem sempre ser usados antes de indicar o valor de uma propriedade CSS. Veja o exemplo abaixo:</p>
+
+
+  <div id="tabs--blank-spaces">
+
+    <div class="tab">
+      <input type="radio" id="tab--blank-spaces--css" name="tabs--blank-spaces" checked>
+      <label for="tab--blank-spaces--css">CSS</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-css linenums">
+/* Ruim */
+.class {
+height: 20px; /* Sem identação */
+}
+
+.class {
+  height:20px; /* Sem espaço antes do valor da propriedade */
+}
+
+/* Bom */
+.class {
+  height: 20px;
+}
+        </pre>
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="tab--blank-spaces--html" name="tabs--blank-spaces">
+      <label for="tab--blank-spaces--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Ruim: sem identação --&gt;
+&lt;div class="whatever"&gt;
+&lt;p class="parent"&gt;
+&lt;!-- content --&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Bom --&gt;
+&lt;div class="whatever"&gt;
+  &lt;p class="parent"&gt;
+    &lt;!-- content --&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+  
+</article>
