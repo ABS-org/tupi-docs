@@ -1,0 +1,94 @@
+---
+layout: interna
+title: Gerais
+---
+{% include submenu-principles.html %}
+
+<article class="content">
+  <h1>Formatação</h1>
+  <p class="paragraph">
+    O formato de código escolhido deve garantir que o código seja: fácil de ler; fácil de comentar claramente; minimize a chance de introduzir erros acidentalmente; e resulte em úteis visualizações de diferença. Para isso, vale seguir as normas abaixo:
+  </p>
+
+  <ul>
+    <li>Use um seletor/tag por linha.</li>
+    <li>Um único espaço antes da abertura das chaves em um conjunto de regras.</li>
+    <li>Uma única declaração por linha.</li>
+    <li>Um nível de indentação para cada declaração e para cada bloco de tags.</li>
+    <li>Sempre inclua um ponto-e-vírgula no fim da última declaração em um bloco declarativo.</li>
+    <li>Separe cada conjunto de regras por uma linha em branco.</li>
+    <li>Use cores em valor hexadecial em vez de RGB.</li>
+    <li>Não especifique a unidade quando o valor for zero.</li>
+    <li>Esforce-se para definir os valores com apenas uma propriedade em propriedades específicas, ex.: margin, padding.</li>
+  </ul>
+
+  <p>Veja alguns exemplos de boas e más práticas:</p>
+
+  <div id="tabs--formatting">
+
+    <div class="tab">
+      <input type="radio" id="tab-1" name="tab--formatting" checked>
+      <label for="tab-1">CSS</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-css linenums">
+/* Ruim */
+.seletor-1, .seletor-2, .seletor-3 {
+  color: #333;
+}
+
+/* Bom */
+.seletor-1,
+.seletor-2,
+.seletor-3 {
+  color: #333;
+}
+
+/* Ruim */
+.seletor {
+  color: #333; margin: 0;
+}
+
+/* Bom */
+.seletor {
+  color: #333;
+  margin: 0;
+}
+        </pre>
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="tab-2" name="tab--formatting">
+      <label for="tab-2">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Ruim --&gt;
+&lt;div class="box"&gt;&lt;p class="paragraph"&gt;&lt;/p&gt;&lt;/div&gt;
+
+&lt;!-- Bom --&gt;
+&lt;div class="box"&gt;
+  &lt;p class="paragraph"&gt;
+
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Ruim --&gt;
+&lt;div class="box"&gt;
+&lt;p class="paragraph"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Bom --&gt;
+&lt;div class="box"&gt;
+  &lt;p class="paragraph"&gt;
+  
+  &lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+</article>
