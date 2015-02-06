@@ -1,0 +1,62 @@
+---
+layout: interna
+title: Classes e Variáveis
+---
+{% include submenu-principles.html %}
+
+<article class="content">
+  <h1>Classes e Variáveis</h1>
+
+  <p class="paragraph">
+    Você não é um compilador/compressor de código humano, então não tente ser.
+  </p>
+
+  <p class="paragraph">
+    Use nomes claros e previdentes para classes HTML e variáveis SCSS. Escolha um padrão de nomes compreensível e consistente que faça sentido para arquivos HTML e arquivos CSS.
+  </p>
+
+  <p class="paragraph">
+    Além disso, alguns princípios devem ser seguidos. Veja abaixo:
+  </p>
+
+  <ul>
+    <li>Use hífen para nomes compostos e dois hífens para separar nomes do estado da classe, tipo etc.</li>
+    <li>Ao nomear classes, primeiro deve vir o tipo do elemento, seguido do nome propriamente dito.</li>
+  </ul>
+
+  <p class="paragraph">
+    Veja exemplos:
+  </p>
+
+  <div id="tabs--class-and-variables">
+
+    <div class="tab">
+      <input type="radio" id="tab--class-and-variables--css" name="tabs--class-and-variables" checked>
+      <label for="tab--class-and-variables--css">CSS</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-scss linenums">
+[cc lang=”css”]
+/* Ruim */
+.component-awesome-blue {
+  overflow: auto;
+}
+
+.awesome--component {
+  overflow: auto;
+}
+
+/* Bom */
+.component--awesome-blue {
+  overflow: auto;
+}
+
+.component--awesome {
+  overflow: auto;
+}
+        </pre>
+      </div>
+    </div>
+  </div>
+
+</article>
