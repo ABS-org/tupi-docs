@@ -1,0 +1,85 @@
+---
+layout: interna
+title: Comentários
+---
+{% include submenu-principles.html %}
+
+<article class="content">
+  <h1>Comentários</h1>
+
+  <p class="paragraph">
+    Código bem comentado é extremamente importante. Tire tempo para descrever componentes, como eles funcionam, suas limitações e o modo como são construídos. Não deixe outros no time adivinharem o propósito de códigos incomuns ou não óbvios.
+  </p>
+
+  <ul>
+    <li>Coloque comentários em uma nova linha acima do seu código, componente, seção etc.</li>
+    <li>Evite comentários no fim da linha.</li>
+    <li>Mantenha o comprimento da linha a um máximo sensível, por exemplo, 80 colunas.</li>
+    <li>Faça o uso liberal de comentários para quebrar o código em seções distintas.</li>
+    <li>Use comentários com iniciais maiúsculas e indentação de texto consistente.</li>
+    <li>No markup, sempre finalize os comentários de uma seção, componente etc, com uma tag de comentário precedida de uma barra.</li>
+  </ul>
+
+  <p class="paragraph">
+    <strong>Dica</strong>: configure seu editor para lhe prover com atalhos a geração do padrão de comentários acordado.
+  </p>
+
+  <div id="tabs--comments">
+
+    <div class="tab">
+      <input type="radio" id="tab--comments--css" name="tabs--comments" checked>
+      <label for="tab--comments--css">CSS</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-scss linenums">
+/**
+* Seção
+* --------------------------------------------------
+* Bloco de comentário de seção
+*/
+
+/**
+* Sub-seção
+* --------------------------------------------------
+* Bloco de comentário de sub-seção
+*/
+
+/*
+* Bloco de comentário de grupo
+* Ideal para explicações em múltiplas linhas e documentação.
+*/
+
+/* Comentário de uma linha */
+        </pre>
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="tab--comments--html" name="tabs--comments">
+      <label for="tab--comments--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Bom: tag fechando o comentário precedida de uma barra --&gt;
+&lt;!-- Navigator --&gt;
+&lt;nav class="nav--main"&gt;
+&lt;/nav&gt;
+&lt;!-- /Navigator --&gt;
+
+&lt;!-- Bom: comentário acima do código --&gt;
+&lt;!-- Main title, used to start sections --&gt;
+&lt;h1 class="tiitle--main"&gt;
+&lt;/h1&gt;
+
+&lt;!-- Ruim: comentário no fim da linha --&gt;
+&lt;!-- Section --&gt;
+&lt;section class="section--groups"&gt;
+&lt;/section&gt; &lt;!-- /Section --&gt;
+
+&lt;small class="summary--main"&gt;&lt;/small&gt; &lt;!-- Summary below the title --&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+</article>
