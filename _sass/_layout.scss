@@ -6,6 +6,10 @@
   top: -70px;
   .paragraph {
     font-family: 'Open Sans', sans-serif;
+    display: block;
+    position: relative;
+    height: auto;
+    clear: both;
   }
   .header {
     background: #eff4f7;
@@ -31,10 +35,6 @@ article h1 {
   font-weight: 500;
   padding-top: 30px;
   padding-bottom: 5px;
-}
-article h1 + h2 {
-  font-weight: 300;
-  font-size: 1.4em;
 }
 
 article h2 {
