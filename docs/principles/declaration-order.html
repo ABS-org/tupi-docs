@@ -1,0 +1,52 @@
+---
+layout: interna
+title: Gerais
+---
+{% include submenu-principles.html %}
+
+<article class="content">
+  <h1>Ordem de Declaração</h1>
+  <p class="paragraph">
+    Declarações devem ser ordenadas segundo um único princípio. Nesse caso, agruparemos as propriedades relacionadas, iniciando por propriedades referente a estrutura e posicionamento. Ex.: tamanho, espaçamento, margem etc. Em seguida, as propriedades referente ao estilo: cor, tamanho de fonte, fundo etc.
+  </p>
+
+  <p class="paragraph">
+    Caso seja incluído mixins ou includes nas declarações, estes devem vir antes, seguindo o mesmo princípio: estrutura antecedendo os estilos.
+  </p>
+
+  <div id="tabs--declaration-order">
+
+    <div class="tab">
+      <input type="radio" id="tab--declaration-order--css" name="tab--declaration-order" checked>
+      <label for="tab--declaration-order--css">CSS</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-css linenums">
+/* Ruim */
+.class {
+  height: 100px;
+  color: #fff;
+  position: relative;
+  background: #eee;
+  width: 100px;
+  top: 10px;
+}
+
+/* Bom */
+.class {
+  /* Estrutura */
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  /* Estilo */
+  background: #eee;
+  color: #fff;
+}
+        </pre>
+      </div>
+    </div>
+  </div>
+</article>
