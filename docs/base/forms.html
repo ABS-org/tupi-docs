@@ -1,0 +1,62 @@
+---
+layout: interna
+title: Formulários
+---
+{% include submenu-base.html %}
+
+<article class="content">
+  <h1>Formulários</h1>
+  <p>Modelo básico de inputs com dois tamanhos.</p>
+
+  <h2>Tamanho normal</h2>
+
+  <div class="box-spacing">
+    <div class="form-group">
+      <label class="form-label label-md">Título label</label>
+      <input type="text" class="form-control input-md" placeholder="Input">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control textarea-md">Textarea</textarea>
+    </div>
+  </div>
+
+  <h2>Tamanho pequeno</h2>
+
+  <div class="box-spacing">
+    <div class="form-group">
+      <label class="form-label label-sm">Título label</label>
+      <input type="text" class="form-control input-sm" placeholder="Input">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control textarea-sm">Textarea</textarea>
+    </div>
+  </div>
+
+  <div id="tabs--forms">
+
+    <div class="tab">
+      <input type="radio" id="tab--forms--html" name="tabs--forms" checked>
+      <label for="tab--forms--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Normal --&gt;
+&lt;div class="form-group"&gt;
+  &lt;label class="form-label label-md">Título label&lt;/label&gt;
+  &lt;input type="text" class="form-control input-md" placeholder="Input"&gt;
+  &lt;textarea class="form-control textarea-md">Textarea&lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;!-- Pequeno --&gt;
+&lt;div class="form-group"&gt;
+  &lt;label class="form-label label-sm">Título label&lt;/label&gt;
+  &lt;input type="text" class="form-control input-sm" placeholder="Input"&gt;
+  &lt;textarea class="form-control textarea-sm">Textarea&lt;/textarea&gt;
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+
+</article>
