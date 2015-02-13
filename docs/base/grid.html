@@ -1,0 +1,66 @@
+---
+layout: interna
+title: Grid
+---
+{% include submenu-base.html %}
+
+<article class="content">
+  <h1>Grid</h1>
+  <p>Abaixo veremos o modo de usar o grid do Tupi, heradado do <a href="http://getbootstrap.com/css/#grid" target="_blank">Bootstrap</a></p>
+
+  <h2>Grid semântico</h2>
+  <p>As classes de grid não devem ser usadas inline, evitando a adoção de inúmeras classes, poluindo o markup. Nesse caso, devemos usar o grid de modo semântico, com apenas umas classe por elemento. Como nos exemplos abaixo.</p>
+
+  <div id="tabs--grid">
+
+    <div class="tab">
+      <input type="radio" id="tab--grid--css" name="tabs--grid" checked>
+      <label for="tab--grid--css">SCSS</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-scss linenums">
+/* Maneira correta de aplicar o grid */
+.my-element {
+  @include make-xs-column(12);
+  @include make-sm-column(8);
+  @include make-md-column(7);
+  @include make-lg-column(6);
+}
+.element-wrap {
+  @include make-row;
+}
+        </pre>
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="tab--grid--html" name="tabs--grid">
+      <label for="tab--grid--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Maneira errada --&gt;
+&lt;div class="col-xs-12 col-sm-8 col-md-7 col-lg-6"&gt;
+&lt;/div&gt;
+
+&lt;!-- Maneira correta --&gt;
+&lt;div class="my-element"&gt;
+&lt;/div&gt;
+
+&lt;!-- Ou também --&gt;
+&lt;div class="element-wrap"&gt;
+  &lt;div class="my-element"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p>
+    Perceba que é possível usar apenas uma classe e incluir os grids através do pré-processador CSS (SASS, utilizado pelo Tupi).
+  </p>
+
+  <p>Caso seu elemento esteja inserido dentro de uma row (o que geralmente acontece), basta adicionar um elemento outro envolvendo. Este elemento deve receber o termo "wrap".
+
+</article>
