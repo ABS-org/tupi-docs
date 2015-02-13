@@ -1,0 +1,59 @@
+---
+layout: interna
+title: Botões
+---
+{% include submenu-base.html %}
+
+<article class="content">
+  <h1>Botões</h1>
+  <p class="paragrapg">Modelo básico em dois tamanhos.</p>
+
+  <h2>Tamanho normal</h2>
+
+  <div class="box-spacing">
+    <a class="btn btn-primary btn-md btn-primary-md">Postar</a>
+    <br>
+    <a class="btn btn-success btn-md btn-success-md">Salvar</a>
+    <br>
+    <a class="btn btn-warning btn-md btn-warning-md">Editar</a>
+    <br>
+    <a class="btn btn-danger btn-md btn-danger-md">Cancelar</a>
+  </div>
+
+  <h2>Tamanho pequeno</h2>
+
+  <div class="box-spacing">
+    <a class="btn btn-primary btn-xs btn-primary-sm">Primary</a>
+    <br>
+    <a class="btn btn-success btn-xs btn-success-sm">Success</a>
+    <br>
+    <a class="btn btn-warning btn-xs btn-warning-sm">Warning</a>
+    <br>
+    <button class="btn btn-danger btn-xs btn-danger-sm">Danger</button>
+  </div>
+
+  <div id="tabs--buttons">
+
+    <div class="tab">
+      <input type="radio" id="tab--buttons--html" name="tabs--buttons" checked>
+      <label for="tab--buttons--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Tamanho normal --&gt;
+&lt;a class="btn-primary-md">Postar&lt;/a&gt;
+&lt;a class="btn-success-md">Salvar&lt;/a&gt;
+&lt;a class="btn-warning-md">Editar&lt;/a&gt;
+&lt;a class="btn-danger-md">Cancelar&lt;/a&gt;
+
+&lt;!-- Tamanho pequeno --&gt;
+&lt;a class="btn-primary-xs">Primary&lt;/a&gt;
+&lt;a class="btn-success-xs">Success&lt;/a&gt;
+&lt;a class="btn-warning-xs">Warning&lt;/a&gt;
+&lt;a class="btn-danger-xs">Danger&lt;/a&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+</article>
