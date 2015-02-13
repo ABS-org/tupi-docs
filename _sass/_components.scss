@@ -244,7 +244,8 @@
 #tabs--typography,
 #tabs--grid,
 #tabs--buttons,
-#tabs--forms {
+#tabs--forms,
+#tabs--icons {
   @extend .tabs;
 }
 #tabs--blank-spaces {
@@ -276,6 +277,10 @@
 }
 #tabs--forms {
   height: 260px;
+}
+#tabs--icons {
+  height: 120px;
+  margin-top: 140px;
 }
 
 .box-code {
@@ -360,4 +365,8 @@
   span {
     font-size: 0.85em;
   }
+}
+
+.title-icons {
+  margin: 20px 0 20px 0;
 }
