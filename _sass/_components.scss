@@ -165,11 +165,11 @@
   &.base-box {
     .box-header {
       background: #eff4f7;
-      color: #999;
-      border-top: 5px solid #999;
+      color: $base-color;
+      border-top: 5px solid darken($base-color, 5%);
     }
     .fa-circle {
-      color: #999;
+      color: darken($base-color, 5%);
     }
   }
 }
@@ -240,7 +240,11 @@
 #tabs--comments,
 #tabs--exceptions,
 #tabs--declaration-order,
-#tabs--class-and-variables {
+#tabs--class-and-variables,
+#tabs--typography,
+#tabs--grid,
+#tabs--buttons,
+#tabs--forms {
   @extend .tabs;
 }
 #tabs--blank-spaces {
@@ -261,10 +265,99 @@
 #tabs--class-and-variables {
   height: 420px;
 }
+#tabs--typography {
+  height: 320px;
+}
+#tabs--grid {
+  height: 320px;
+}
+#tabs--buttons {
+  height: 260px;
+}
+#tabs--forms {
+  height: 260px;
+}
 
 .box-code {
   margin: 25px 20px 25px 20px;
   padding: 25px 0;
   background: #f5f8fa;
   font-weight: normal;
+}
+
+.colors-demo {
+  margin: 0 20px;
+  .color-demo {
+    float: left;
+    list-style: none;
+    margin-right: 2%;
+    .color-text {
+      padding: 10px;
+      font-size: 0.8em;
+    }
+  }
+  .color-bg {
+    width: 120px;
+    height: 100px;
+    &.principles { background: $principles-color; }
+    &.styles { background: $styles-color; }
+    &.base { background: $base-color; }
+    &.components { background: $components-color; }
+    &.principles-dark { background: darken($principles-color, 10%); }
+    &.principles-light { background: lighten($principles-color, 10%); }
+    &.styles-dark { background: darken($styles-color, 10%); }
+    &.styles-light { background: lighten($styles-color, 10%); }
+    &.base-dark { background: darken($base-color, 10%); }
+    &.base-light { background: lighten($base-color, 10%); }
+    &.components-dark { background: darken($components-color, 10%); }
+    &.components-light { background: lighten($components-color, 10%); }
+  }
+}
+
+.box-spacing {
+  padding: 0 20px;
+}
+
+.btn {
+  width: auto!important;
+  &.btn-xs {
+    font-size: 13px!important;
+    padding: 2px 8px;
+  }
+}
+
+.form-group {
+  input, textarea { width: 95%!important; }
+  .label-sm {
+    font-size: 13px;
+  }
+  .label-md {
+    font-size: 16px;
+  }
+}
+.form-control {
+  &.input-sm {
+    height: 20px!important;
+  }
+  &.textarea-sm {
+    min-height: 80px;
+    font-size: 14px;
+  }
+  &.textarea-md {
+    min-height: 120px;
+  }
+}
+
+.icons-list {
+  margin-left: 0;
+}
+.text-center {
+  text-align: center;
+  width: 120px;
+  margin: 0 10px 0 10px;
+  list-style: none;
+  float: left;
+  span {
+    font-size: 0.85em;
+  }
 }
