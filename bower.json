@@ -23,6 +23,6 @@
     "docs"
   ],
   "dependencies": {
-    "tupi": "0.1.67"
+    "tupi": "0.5.1"
   }
 }
