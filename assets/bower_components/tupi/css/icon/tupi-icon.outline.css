@@ -5,11 +5,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'icons-outline';
-  src: url('/assets/bower_components/tupi/icon/outline/icons-outline.eot?v=4.2.0');
-  src: url('/assets/bower_components/tupi/icon/outline/icons-outline.eot?#iefix&v=4.2.0') format('embedded-opentype'),
-  url('/assets/bower_components/tupi/icon/outline/icons-outline.woff?v=4.2.0') format('woff'),
-  url('/assets/bower_components/tupi/icon/outline/icons-outline.ttf?v=4.2.0') format('truetype'),
-  url('/assets/bower_components/tupi/icon/outline/icons-outline.svg?v=4.2.0#iconsoutlineregular') format('svg');
+  src: url('/bower_components/tupi/icon/outline/icons-outline.eot?v=4.2.0');
+  src: url('/bower_components/tupi/icon/outline/icons-outline.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('/bower_components/tupi/icon/outline/icons-outline.woff?v=4.2.0') format('woff'), url('/bower_components/tupi/icon/outline/icons-outline.ttf?v=4.2.0') format('truetype'), url('/bower_components/tupi/icon/outline/icons-outline.svg?v=4.2.0#iconsoutlineregular') format('svg');
   font-weight: normal;
   font-style: normal; }
 

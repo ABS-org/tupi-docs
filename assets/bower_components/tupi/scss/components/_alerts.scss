@@ -1,0 +1,20 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.alert-dismissible {
+  padding-right: ($alert-padding + 20);
+
+  // Adjust close link position
+  .close {
+    float: right;
+    color: inherit;
+    @include opacity(0.6);
+  }
+}

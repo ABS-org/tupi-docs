@@ -1962,6 +1962,96 @@ textarea.input-lg, .form-horizontal .form-group-lg textarea.form-control, select
     border-width: 13px;
     margin-left: 3px; }
 
+.search-full--wrapper {
+  margin: 20px 0;
+  padding: 15px 0;
+  clear: both;
+  overflow: auto; }
+  .search-full--wrapper .search-full--input {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    width: 83.3333333333%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 78px;
+    padding: 22px 18px;
+    border-radius: 4px 0 0 4px;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0.8; }
+    @media (min-width: 1200px) {
+      .search-full--wrapper .search-full--input {
+        float: left;
+        width: 91.6666666667%; } }
+    @media (min-width: 992px) {
+      .search-full--wrapper .search-full--input {
+        float: left;
+        width: 91.6666666667%; } }
+    @media (min-width: 768px) {
+      .search-full--wrapper .search-full--input {
+        float: left;
+        width: 91.6666666667%; } }
+    @media (max-width: 767px) {
+      .search-full--wrapper .search-full--input {
+        height: 62px;
+        font-size: 16px; } }
+  .search-full--wrapper .search-full--btn {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    width: 16.6666666667%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 78px;
+    padding: 16px 0;
+    background: #eee;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 38px;
+    opacity: 0.8; }
+    @media (min-width: 1200px) {
+      .search-full--wrapper .search-full--btn {
+        float: left;
+        width: 8.3333333333%; } }
+    @media (min-width: 992px) {
+      .search-full--wrapper .search-full--btn {
+        float: left;
+        width: 8.3333333333%; } }
+    @media (min-width: 768px) {
+      .search-full--wrapper .search-full--btn {
+        float: left;
+        width: 8.3333333333%; } }
+    @media (max-width: 767px) {
+      .search-full--wrapper .search-full--btn {
+        height: 62px;
+        padding: 18px 0;
+        font-size: 22px; } }
+
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -2843,7 +2933,7 @@ button.close {
       width: 220px;
       position: absolute;
       top: -5px;
-      left: -20px; }
+      left: -21px; }
       #header-main .app-main-logo .logo-cdp .logo-text {
         display: block; } }
   @media (max-width: 767px) {

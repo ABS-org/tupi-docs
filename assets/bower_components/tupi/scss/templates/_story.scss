@@ -10,7 +10,7 @@
 
 $section--banner-height: 445px;
 
-$section--banner-height-edit: 535px;
+$section--banner-height-edit: auto;
 
 // Story: Relatos
 //
@@ -54,10 +54,11 @@ $section--banner-height-edit: 535px;
       background-size: cover;
     }
     .story-banner--header {
-      margin-top: 30px;
+      margin: 20px 0;
+      padding: 15px 0;
+      overflow: hidden;
       .criar-relato-link {
         margin-top: 15px;
-        @extend .pull-right;
       }
       .external-link {
         font-size: 12px;
@@ -66,7 +67,76 @@ $section--banner-height-edit: 535px;
         text-decoration: underline;
       }
       .header-brand--story {
-        @include make-lg-column(8);
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(7);
+        @include make-lg-column(6);
+        @media (max-width: $screen-xs-max) {
+          height: 55px;
+        }
+        .header-brand-icon {
+          @media (max-width: $screen-xs-max) {
+            width: 61px;
+            height: 55px;
+          }
+          @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            width: 80px;
+            height: 70px;
+          }
+          @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+            width: 80px;
+            height: 70px;
+          }
+          @media (min-width: $screen-lg-min) {
+            width: 80px;
+            height: 70px;
+          }
+          // hack
+          .fa-stack { margin-top: -4px; }
+          .fa-circle {
+            font-size: 81px;
+            @media (max-width: $screen-xs-max) {
+              font-size: 65px;
+            }
+          }
+          .cdp-report {
+            font-size: 75px;
+            top: 18px;
+            left: -2px;
+            @media (max-width: $screen-xs-max) {
+              font-size: 56px;
+              top: 11px;
+              left: 0;
+            }
+          }
+        }
+        .header-brand-text {
+          @include make-lg-column(8);
+          @include make-md-column(6);
+          @include make-sm-column(9);
+          @include make-xs-column(10);
+          height: 70px;
+          @media (max-width: $screen-xs-max) {
+            height: 55px;
+          }
+          .header-brand-text--title {
+            font-size: 22px;
+            margin-top: 20px;
+            @media (max-width: $screen-xs-max) {
+              font-size: 20px;
+              margin-top: 12px;
+            }
+          }
+          .header-brand-text--small {
+            font-size: 16px;
+            @media (max-width: $screen-xs-max) {
+              font-size: 12px;
+            }
+            @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+              font-size: 14px;
+            }
+          }
+        }
       }
     }
     .btn-story-send {
@@ -75,7 +145,7 @@ $section--banner-height-edit: 535px;
     .story-banner--header-summary {
       @include make-lg-column(8);
       @include make-lg-column-offset(2);
-      height: 210px;
+      min-height: 210px;
       margin-top: 100px;
       .story-summary--title,
       .story-summary--paragraph {
@@ -87,6 +157,9 @@ $section--banner-height-edit: 535px;
         font-size: 36px;
         padding-bottom: 20px;
         border-bottom: 1px solid #fff;
+        .editable-field {
+
+        }
       }
       .story-summary--small-date {
         font-size: 12px;
@@ -105,9 +178,6 @@ $section--banner-height-edit: 535px;
         margin: 5px 0;
       }
 
-    }
-    .story-banner--header {
-      height: 70px;
     }
     .story-header--overlay {
       height: $section--banner-height;
@@ -196,6 +266,9 @@ $section--banner-height-edit: 535px;
         .featured-tags--list {
           list-style: none;
           color: #fff;
+          margin-top: 6px;
+          padding-left: 52px;
+          line-height: 12px;
           .featured-tags--list-item {
             float: left;
             margin-right: 5px;
@@ -210,6 +283,9 @@ $section--banner-height-edit: 535px;
               color: #fff;
               font-size: 14px;
               text-decoration: underline;
+              @media (max-width: $screen-xs-max) {
+                font-size: 12px;
+              }
             }
           }
         }
@@ -235,17 +311,41 @@ $section--banner-height-edit: 535px;
       @include make-xs-column(12);
     }
     .story-main-list--header {
+      @include make-xs-column(12);
+      @include make-sm-column(12);
+      @include make-md-column(12);
       @include make-lg-column(12);
-      height: 50px;
-      margin-right: 20px;
+      margin-bottom: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
       .form-control {
-        width: 300px;
-        @extend .pull-left;
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(4);
+        @include make-lg-column(4);
         margin-right: 20px;
+        @media (max-width: $screen-xs-max) {
+          margin-bottom: 15px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+          margin-bottom: 15px;
+        }
       }
       .btn-more {
         margin: 0;
         @extend .pull-right;
+        @media (max-width: $screen-xs-max) {
+
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+        }
+        @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+
+        }
+        @media (min-width: $screen-lg-min) {
+
+        }
       }
     }
     .story-item {
@@ -262,6 +362,7 @@ $section--banner-height-edit: 535px;
     .header-brand--story {
       @include make-lg-column(12);
       height: 50px;
+      margin: 30px 0;
       .header-brand-icon {
         @include make-lg-column(2);
         font-size: 30px;
@@ -309,11 +410,19 @@ $section--banner-height-edit: 535px;
           margin-bottom: 20px;
           height: 40px;
         }
+        .actor-block--list-item {
+          display: inline-block;
+          padding-right: 5px;
+          padding-bottom: 5px;
+        }
         .author-block--list-item--img {
           width: 32px;
           height: 32px;
           @extend .img-circle;
           @extend .pull-left;
+          .thumbnail {
+            @extend .img-circle;
+          }
         }
         .author-block--list-item--info {
           @include make-lg-column(10);
@@ -390,15 +499,27 @@ $section--banner-height-edit: 535px;
 
   .btn-featured-list {
     @include make-lg-column(12);
+    margin-bottom: 30px;
     text-align: center;
   }
 
   .story-item {
-    height: 370px;
+    min-height: 400px;
     margin-bottom: 40px;
     .story-item--wrapper {
       @include make-row;
-      height: 400px;
+      @media (max-width: $screen-xs-max) {
+        min-height: 280px;
+      }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        min-height: 300px;
+      }
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        min-height: 340px;
+      }
+      @media (min-width: $screen-lg-min) {
+        min-height: 400px;
+      }
       overflow: hidden;
       position: relative;
       &:hover {
@@ -433,7 +554,7 @@ $section--banner-height-edit: 535px;
         }
       }
       .story-item--title {
-        height: 40px;
+        min-height: 51px;
         overflow: hidden;
       }
       .story-item--statistics {
@@ -500,7 +621,7 @@ $section--banner-height-edit: 535px;
       margin: 10px 0 5px 0;
     }
     .story-item--info {
-      height: 46px;
+      min-height: 46px;
       font-size: 14px;
       border-bottom: 1px solid $gray-lighter;
       .story-item--info-author,
@@ -1124,14 +1245,37 @@ $section--banner-height-edit: 535px;
   }
 }
 
-
+.g-plusone {
+  vertical-align: top;
+  float: left;
+  margin-right: 10px;
+}
+.g-plusone {
+  width: 64px !important;
+}
+.fb-btn-share,
+.gplus-btn {
+  padding: 0;
+}
 .navbar-actions-fixed {
   margin-top: 20px;
-  .g-plusone {
-    margin-bottom: -7px;
+  .btn,
+  .fb-btn-share,
+  .gplus-btn {
+    vertical-align: top;
+    float: left;
+    margin-right: 10px;
+    font-size: 12px;
+    white-space: nowrap;
   }
-  .fb-btn-share {
-    margin-bottom: -5px;
+}
+.header-shrink {
+  .btn,
+  .fb-btn-share,
+  .gplus-btn {
+    vertical-align: top;
+    float: left;
+    margin-right: 10px;
   }
 }
 
@@ -1159,7 +1303,6 @@ $section--banner-height-edit: 535px;
     margin-top: 0;
   }
   .btn {
-    margin-right: 5px;
     border: none;
     font-size: 12px;
     padding: 3px 10px;
@@ -1235,7 +1378,7 @@ $section--banner-height-edit: 535px;
       }
       .story-form-edit-date {
         @include make-row;
-        height: 120px;
+        // height: 120px;
         margin-bottom: 10px;
         .datepicker-start,
         .datepicker-end {
@@ -1277,6 +1420,10 @@ $section--banner-height-edit: 535px;
     margin-top: 40px;
   }
 }
+
+//
+// Modal - Add new story
+//
 .story-modal-autor,
 .relato-add-ator-modal {
   .modal-header {
@@ -1471,9 +1618,6 @@ $section--banner-height-edit: 535px;
     height: $section--banner-height-edit !important;
     background: rgba(0, 0, 0, 0.7) !important;
   }
-  .header-brand-text--small {
-    color: #fff !important;
-  }
   &.topo-relatos-padrao {
     background-color: #000;
     background-position: center;
@@ -1570,6 +1714,10 @@ $section--banner-height-edit: 535px;
 .wrapper-tag_categoria {
   @include make-lg-column(12);
 }
+
+.story-main-content--text-wrapper {
+  margin: 30px 0;
+}
 .story-main-content--text-wrapper,
 .story-main-content--answer-wrapper {
   @include make-lg-column(12);
@@ -1603,4 +1751,17 @@ $section--banner-height-edit: 535px;
       display: none;
     }
   }
+}
+
+.story-summary--title {
+  .editable-field {
+    .btn-primary {
+      vertical-align: top;
+    }
+  }
+}
+
+.user-avatar-link {
+  @extend .img-circle;
+  cursor: pointer;
 }

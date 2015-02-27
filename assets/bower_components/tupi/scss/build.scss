@@ -2,73 +2,82 @@
 
 // Settings
 // ------------------------------------
-@import "custom";
+@import
+  "custom",
 
 // Mixins
-@import "mixins";
+// ------------------------------------
+  "mixins",
 
 // Base
 // ------------------------------------
-@import "base/normalize";
-@import "base/print";
-@import "base/sections";
+  "base/normalize",
+  "base/print",
+  "base/sections",
 
-@import "base/scaffolding";
-@import "base/type";
-@import "base/grid";
-@import "base/tables";
-@import "base/forms";
-@import "base/buttons";
-@import "base/alerts";
-@import "base/footer";
+  "base/scaffolding",
+  "base/type",
+  "base/grid",
+  "base/tables",
+  "base/forms",
+  "base/buttons",
+  "base/footer",
 
 // Components
-@import "components/component-animations";
-@import "components/dropdowns";
-@import "components/panels";
-@import "components/pagination";
-@import "components/navs";
-@import "components/navbar";
-@import "components/progress-bars";
-@import "components/breadcrumbs";
-@import "components/navbar-custom";
-@import "components/badges";
-@import "components/carousel";
-@import "components/carousel-custom";
-@import "components/chat";
+// ------------------------------------
+  "components/alerts",
+
+  "components/component-animations",
+  "components/dropdowns",
+  "components/panels",
+  "components/pagination",
+  "components/navs",
+  "components/navbar",
+  "components/progress-bars",
+  "components/breadcrumbs",
+  "components/navbar-custom",
+  "components/badges",
+  "components/carousel",
+  "components/carousel-custom",
+  "components/chat",
+
+// Styles
+// ------------------------------------
+  "styles/alerts",
 
 // Transition
-@import "component/header-shrink";
+  "component/header-shrink",
 
 // Components w/ JavaScript
-@import "components/modals";
+  "components/modals",
+  "components/tooltip",
 
 // Core CSS
-@import "build/typography";
-@import "build/buttons";
+  "build/typography",
+  "build/buttons",
 
 // Icons
-@import "icon/awesome/base";
-@import "icon/awesome/icons";
-@import "icon/cdp/base";
-@import "icon/cdp/icons";
-@import "icon/line/base";
-@import "icon/line/icons";
-@import "icon/outline/base";
-@import "icon/outline/icons";
+  "icon/awesome/base",
+  "icon/awesome/icons",
+  "icon/cdp/base",
+  "icon/cdp/icons",
+  "icon/line/base",
+  "icon/line/icons",
+  "icon/outline/base",
+  "icon/outline/icons",
 
-@import "build/forms";
-@import "build/user";
-@import "build/group";
-@import "build/breadcrumb";
-@import "build/titles";
+  "build/forms",
+  "build/user",
+  "build/group",
+  "build/breadcrumb",
+  "build/titles",
 
 // Templates
-@import "templates/story";
-@import "templates/group";
-@import "templates/notifications";
+  "templates/story",
+  "templates/group",
+  "templates/notifications",
 
 
 // Components
-@import "components/block-collapse";
-@import "components/block-info";
+  "components/block-collapse",
+  "components/block-info";

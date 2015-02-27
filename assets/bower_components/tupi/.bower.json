@@ -1,6 +1,6 @@
 {
   "name": "tupi",
-  "version": "0.1.67",
+  "version": "0.5.1",
   "homepage": "https://github.com/ABS-org/tupi",
   "authors": [
     "Daniel Torres <danielfeelfine@gmail.com>",
@@ -36,13 +36,13 @@
     "classie": "~1.0.0",
     "snap.svg": "~0.2.0"
   },
-  "_release": "0.1.67",
+  "_release": "0.5.1",
   "_resolution": {
     "type": "version",
-    "tag": "0.1.67",
-    "commit": "18adf297d21d1caa5cb0e70e20c2b50387349df3"
+    "tag": "0.5.1",
+    "commit": "27e63cf6f2b4fc86b23d5f21302d854692821fc7"
   },
   "_source": "git://github.com/ABS-org/tupi.git",
-  "_target": "0.1.67",
+  "_target": "0.5.1",
   "_originalSource": "tupi"
 }
