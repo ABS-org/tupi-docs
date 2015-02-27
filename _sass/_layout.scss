@@ -14,15 +14,16 @@
   .header {
     background: #eff4f7;
     box-shadow: none;
-    height: 80px;
+    height: 90px;
     padding: 15px 0 15px 0;
-    h1 {
+    h1.title {
       border-right: 2px solid #d9e5ed;
-      padding: 20px;
       margin-right: 20px;
+      margin-top: 15px;
     }
-    h2 {
+    h2.subtitle {
       padding: 10px 0;
+      margin: 0;
     }
   }
 }
@@ -31,21 +32,26 @@ article.content {overflow: hidden;}
 .nobg {background: none; border: none;}
 
 article h1 {
-  font-size: 2em;
+  font-size: 30px;
   font-weight: 500;
-  padding-top: 30px;
+
   padding-bottom: 5px;
+  color: #444;
 }
 
 article h2 {
   font-weight: 500;
   padding: 20px 0 10px;
+  font-size: 22px;
+  color: #444;
 }
 
 article h3 {
   font-weight: 500;
   padding-bottom: 10px;
   padding-top: 15px;
+  font-size: 18px;
+  color: #444;
 }
 
 article h4 {
@@ -55,9 +61,8 @@ article h4 {
 
 article p {
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: 14px;
   line-height: 23px;
-  margin-bottom: 15px;
   color: rgba(0,0,0,0.7);
 }
 
@@ -85,6 +90,13 @@ article h5,
 article li {
   padding-left: 20px;
   padding-right: 20px;
+}
+.alert p,
+.alert h4 {
+  padding: 0;
+}
+.alert .close span {
+  font-size: 16px;
 }
 
 article ul {
@@ -171,4 +183,8 @@ hr {
   font-size: 11px;
   text-align: right;
   float: right;
+}
+
+.prettyprint {
+  font-size: 12px;
 }
