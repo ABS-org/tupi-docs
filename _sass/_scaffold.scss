@@ -14,9 +14,11 @@ body,html{height:100%}
 
 body {
   font-family: 'Lato', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-size: 15px;
   background: url(../../assets/img/bg.jpg);
 }
+
+a, a:hover { text-decoration: none; }
 
 .limit {max-width: 900px; margin: 0 auto;}
 
