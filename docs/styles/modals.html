@@ -1,0 +1,102 @@
+---
+layout: interna
+title: Modals
+---
+{% include submenu-styles.html %}
+
+<article class="content">
+  <h1>Modals</h1>
+  <p>As Modais podem ser de vários tamanhos e ter ou não transições.</p>
+
+  <h2>Exemplo</h2>
+  <p>Clique no botão para exibir a modal.</p>
+
+  <div class="box-spacing">
+    <!-- Modal -->
+    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-example">Modal sem Fade</button>
+
+    <div id="modal-example" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Conteúdo de uma Modal sem <i>Fade</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Large modal -->
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Conteúdo de uma Modal tamanho <i>Large</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Small modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Conteúdo de uma Modal tamanho <i>Small</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Aplicando os Estilos</h2>
+  <p>Para indicar o tamanho de uma modal, basta adicionar as classes <i>modal-sm</i> ou <i>modal-lg</i> no <i>modal-dialog</i>.</p>
+  <p>Para usar o efeito fade, basta adicionar a classe <i>fade<i> onde estiver a classe <i>modal</i>.</p>
+  <p>Veja o código abaixo:</p>
+
+  <div id="tabs--styles-modals">
+
+    <div class="tab">
+      <input type="radio" id="tab--styles-modals--html" name="tab--styles-modals" checked>
+      <label for="tab--styles-modals--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Modal com fade --&gt;
+&lt;div id="modal-example" class="modal fade"&gt;
+  &lt;div class="modal-dialog modal-sm"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;p&gt;Modal content&lt;p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal grande --&gt;
+&lt;div id="modal-example" class="modal"&gt;
+  &lt;div class="modal-dialog modal-lg"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;p&gt;Modal content&lt;p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal pequena --&gt;
+&lt;div id="modal-example" class="modal"&gt;
+  &lt;div class="modal-dialog modal-sm"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;p&gt;Modal content&lt;p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p>*Este componente é o mesmo do bootstrap, sem alterações significativas</p>
+  <p>Mais informações em: <a href="http://getbootstrap.com/javascript/#modals" target="_blank">Bootstrap Modals</a></p>
+
+</article>
