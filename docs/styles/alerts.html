@@ -1,0 +1,72 @@
+---
+layout: interna
+title: Alerts
+---
+{% include submenu-styles.html %}
+
+<script src="/tupi-docs/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<article class="content">
+  <h1>Alerts</h1>
+  <p>Os Alerts podem ser de vários estilos, indicando estados específicos. E podem ter transições ao fechar.</p>
+
+  <h2>Exemplo</h2>
+
+  <div class="box-spacing">
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <h4>Alert Success</h4>
+    </div>
+
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <h4>Alert Danger</h4>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <h4>Alert Warning</h4>
+    </div>
+
+    <div class="alert alert-info alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <h4>Alert Info (sem Fade in)</h4>
+    </div>
+  </div>
+
+  <h2>Aplicando os Estilos</h2>
+  <p>Basta as classes <i>alert-success</i>, <i>alert-danger</i>, <i>alert-warning</i> ou <i>alert-info</i> para estilizar seu alert. É possível adicionar transições como <i>fade</i>, por exemplo.</p>
+  <p>Veja o código abaixo:</p>
+
+  <div id="tabs--styles-alerts">
+
+    <div class="tab">
+      <input type="radio" id="tab--styles-alerts--html" name="tab--styles-alerts" checked>
+      <label for="tab--styles-alerts--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;div class="alert alert-success"&gt;
+    Alert Success
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger"&gt;
+    Alert Danger
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning"&gt;
+    Alert Warning
+&lt;/div&gt;
+
+&lt;div class="alert alert-info fade in"&gt;
+    Alert Info + Fade In
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p>*Este componente é o mesmo do bootstrap, sem alterações significativas</p>
+  <p>Mais informações em: <a href="http://getbootstrap.com/javascript/#alerts" target="_blank">Bootstrap Alerts</a></p>
+
+</article>
