@@ -1,0 +1,57 @@
+---
+layout: interna
+title: Alerts
+---
+{% include submenu-components.html %}
+
+<script src="/tupi-docs/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<article class="content">
+  <h1>Alerts</h1>
+  <p>Alerts são avisos que aparecem eventualmente de acordo com uma ação. Eles podem ser customizados e podem ter um botão para fechar/cancelar.</p>
+
+  <h2>Exemplo</h2>
+
+  <div class="box-spacing">
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <h4>Bem vind@ a Comunidade de Práticas!</h4>
+      <p>Trocar experiências e fazer uma rede dinâmica e viva. Comunique-se, participe das mais diversas comunidades. O conhecimento está ao seu alcance, aprenda com sua rede e acrescente experiências a sua qualificação.</p>
+      <button type="button" class="btn btn-xs btn-danger" data-dismiss="alert" aria-label="Cancel">Cancelar</button>
+    </div>
+  </div>
+
+  <h2>Como usar</h2>
+  <p>Basta adicionar a classe <i class="code-inline">alert-dismissible</i> no elemento que envolve o conteúdo do alert, e o atributo <i class="code-inline">data-dismiss="alert"</i> no botão que terá a ação de fechar em seu alert. O botão fecha o alert e o remove do DOM.</p>
+
+  <p>Veremos os efeitos e estilos do alert, na parte de Estilos.</p>
+
+  <p>Veja abaixo um exemplo de código de um alert:</p>
+  
+  <div id="tabs--components-alerts">
+
+    <div class="tab">
+      <input type="radio" id="tab--components-alerts--html" name="tab--components-alerts" checked>
+      <label for="tab--components-alerts--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Alert --&gt;
+&lt;div class="alert alert-dismissible" role="alert"&gt;
+  &lt;button class="close" data-dismiss="alert" aria-label="Close"&gt;
+    &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;h4&gt;Bem vind@ a Comunidade de Práticas!&lt;/h4&gt;
+  &lt;p&gt;Trocar experiências e fazer uma rede dinâmica e viva. Comunique-se, participe das mais diversas comunidades. O conhecimento está ao seu alcance, aprenda com sua rede e acrescente experiências a sua qualificação.&lt;/p&gt;
+  &lt;button data-dismiss="alert" aria-label="Cancel"&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- /Alert --&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p>*Este componente é o mesmo do bootstrap, sem alterações significativas</p>
+  <p>Mais informações em: <a href="http://getbootstrap.com/javascript/#alerts" target="_blank">Bootstrap Alerts</a></p>
+
+</article>
