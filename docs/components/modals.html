@@ -1,0 +1,86 @@
+---
+layout: interna
+title: Modals
+---
+{% include submenu-components.html %}
+
+<article class="content">
+  <h1>Modals</h1>
+  <p>Modais são uma espécie de janela suspensa na página. Geralmente são usada para confirmação ou exibir formulários de cadastro.</p>
+
+  <h2>Exemplo</h2>
+  <p>Clique no botão para exibir a modal.</p>
+
+  <div class="box-spacing">
+    <!-- Modal -->
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-example">Link to Modal</button>
+
+    <div id="modal-example" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <p>Conteúdo de uma Modal tamanho <i>large</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
+<!-- Small modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+  </div>
+
+  <h2>Como usar</h2>
+  <p>No link para a modal, deve ser incluído o atributo <i>data-toggle</i> com o valor <i>modal</i> e o atributo <i>data-target</i> com o <i>id</i> (ou classe) utilizado na modal, exemplo <i>#modal-example</i>.
+  <p>No elemento que será transformado em modal, basta adicionar a <i>class</i> <i>modal</i>, mais um <i>id</i> qualquer, que deve ser o mesma do <i>data-target</i>.</p>
+  <p>Veja o código abaixo:</p>
+
+  <div id="tabs--components-alerts">
+
+    <div class="tab">
+      <input type="radio" id="tab--components-alerts--html" name="tab--components-alerts" checked>
+      <label for="tab--components-alerts--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Link to Modal --&gt;
+&lt;a data-toggle="modal" data-target="#modal-example">Link to Modal&lt;/a&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div id="modal-example" class="modal"&gt;
+  &lt;div class="modal-dialog modal-sm"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;p&gt;Modal content&lt;p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p>*Este componente é o mesmo do bootstrap, sem alterações significativas</p>
+  <p>Mais informações em: <a href="http://getbootstrap.com/javascript/#modals" target="_blank">Bootstrap Modals</a></p>
+
+</article>
