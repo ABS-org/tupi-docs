@@ -1,0 +1,75 @@
+---
+layout: interna
+title: Tabs
+---
+{% include submenu-components.html %}
+
+<article class="content">
+  <h1>Tabs</h1>
+  <p>Com as tabs é possível fazer transição entre paineis ou elementos em uma mesma página.</p>
+
+  <h2>Exemplo</h2>
+
+  <div class="box-spacing">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#tab-01" data-toggle="tab">Tab 01</a></li>
+      <li><a href="#tab-02" data-toggle="tab">Tab 02</a></li>
+      <li><a href="#tab-03" data-toggle="tab">Tab 03</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab-01">
+        <div class="alert alert-warning">
+          <h4>Tab 01</h4>
+        </div>
+      </div>
+      <div class="tab-pane" id="tab-02">
+        <div class="alert alert-warning">
+          <h4>Tab 02</h4>
+        </div>
+      </div>
+      <div class="tab-pane" id="tab-03">
+        <div class="alert alert-warning">
+          <h4>Tab 03</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Como usar</h2>
+  <p>As tabs são formadas por uma lista de links, onde um dos itens da lista deve receber a classe <i>active</i> e os links devem receber o <i>href</i> igual a seção referente a tab, e o atributo <i>data-toggle</i> recebendo o valor <i>tab</i>.</p>
+  <p>As seções devem estar envolvidas por uma tag cuja classe seja <i>tab-content</i>. Cada item deve conter um id, referente ao link das tabs, e a classe <i>tab-pane</i>. A classe <i>active</i> deve ser usada para indicar a seção que será exibida inicialmente.</p>
+  <p>Veja o código abaixo:</p>
+
+  <div id="tabs--components-tabs">
+
+    <div class="tab">
+      <input type="radio" id="tab--components-tabs--html" name="tab--components-tabs" checked>
+      <label for="tab--components-tabs--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Tabs --&gt;
+&lt;ul&gt;
+  &lt;li class="active"&gt;&lt;a href="#tab-02" data-toggle="tab">Tab 01&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tab-02" data-toggle="tab">Tab 02&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tab-03" data-toggle="tab">Tab 03&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Tab panes --&gt;
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="tab-01"&gt;Tab 01&lt;/div&gt;
+  &lt;div class="tab-pane" id="tab-02"&gt;Tab 02&lt;/div&gt;
+  &lt;div class="tab-pane" id="tab-03"&gt;Tab 03&lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p>*Este componente é o mesmo do bootstrap, sem alterações significativas</p>
+  <p>Mais informações em: <a href="http://getbootstrap.com/javascript/#tabs" target="_blank">Bootstrap Tabs</a></p>
+
+</article>
