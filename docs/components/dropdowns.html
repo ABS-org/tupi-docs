@@ -1,0 +1,56 @@
+---
+layout: interna
+title: Dropdowns
+---
+{% include submenu-components.html %}
+
+<article class="content">
+  <h1>Dropdowns</h1>
+  <p>Dropdowns são menus suspensos que podem conter subitens, podem ser formulários pequenos ou outro tipo de conteúdo.</p>
+
+  <h2>Exemplo</h2>
+
+  <div class="box-spacing">
+    <div class="dropdown">
+      <button class="btn btn-warning" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown
+        <span class="caret"></span>
+      </button>
+      <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop6">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Link</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Outro link</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Link separado</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Como usar</h2>
+  <p>Basta criar um link (ou botão) com o atributo <i>data-toggle</i> contendo o valor <i>dropdown</i>, e um menu com classe <i>dropdown-menu</i>. Ambos envolvido com um elemento contendo a classe <i>dropdown</i>.</p>
+  <p>Veja o código abaixo:</p>
+
+  <div id="tabs--components-dropdowns">
+
+    <div class="tab">
+      <input type="radio" id="tab--components-dropdowns--html" name="tab--components-dropdowns" checked>
+      <label for="tab--components-dropdowns--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;div class="dropdown"&gt;
+  &lt;a data-toggle="dropdown"&gt;
+    Dropdown
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#item"&gt;Item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p>*Este componente é o mesmo do bootstrap, sem alterações significativas</p>
+  <p>Mais informações em: <a href="http://getbootstrap.com/javascript/#dropdowns" target="_blank">Bootstrap Dropdowns</a></p>
+
+</article>
