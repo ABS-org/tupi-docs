@@ -1,0 +1,60 @@
+---
+layout: interna
+title: Tooltips
+---
+{% include submenu-components.html %}
+
+<article class="content">
+  <h1>Tooltips</h1>
+  <p>Tooltips são uma versão melhorada do que é mostrado no atributo <i>title</i> padrão do HTML, usando animação em CSS3, JS e <i>data-attributes</i> para mostrar o <i>title</i> dos elemtos.</p>
+
+  <h2>Exemplo</h2>
+
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  <div class="box-spacing">
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+  </div>
+
+  <h2>Como usar</h2>
+  <p>Por razões de performance, as tooltips são uma funcionalidade <i>opt-in</i>, ou seja, você deve inicializa-las via <i>javascript</i>, ao contrário de outros componentes que são inicializados automaticamente.</p>
+  <p>Para inicializá-las você deve usar o atributo <i>data-toggle="tooltip"</i>. Para complementar, você pode usar o atributo <i>data-placement="top"</i> para indicar onde a <i>tooltip</i> vai aparecer, que pode ter como valor <i>top</i>, <i>left</i>, <i>right</i> e <i>bottom</i></p>
+  <p>As tooltips com o atributo <i>title</i> sem conteúdo não são mostradas. Ou seja, <i>tooltips</i> nunca vão aparecer vazias</p>
+  <p>Veja o exemplo abaixo:</p>
+
+  <div id="tabs--components-tooltips">
+
+    <div class="tab">
+      <input type="radio" id="tab--components-tooltips--html" name="tab--components-tooltips" checked>
+      <label for="tab--components-tooltips--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;a data-toggle="tooltip" data-placement="top" title="Tooltip on top"&gt;
+  Tooltip on top
+&lt;/button&gt;
+
+&lt;script type="text/javascript"&gt;
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+&lt;/script&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p>*Este componente é o mesmo do bootstrap, sem alterações significativas</p>
+  <p>Mais informações em: <a href="http://getbootstrap.com/javascript/#tooltips" target="_blank">Bootstrap Tooltips</a></p>
+
+</article>
