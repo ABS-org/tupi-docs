@@ -1,0 +1,145 @@
+---
+layout: interna
+title: Carousel
+---
+{% include submenu-components.html %}
+
+<article class="content">
+  <h1>Carousel</h1>
+  <p>O <i>Carousel</i> ou Carrossel contém vários elementos que se alternam automaticamente ou manualmente. Ele pode conter controles, para avançar e voltar, e indicadores, para indicar o slide atual.</p>
+
+  <h2>Exemplo</h2>
+
+  <style type="text/css">
+    #carousel-example {
+      height: 250px;
+      background: #dff0d8;
+    }
+    .carousel-caption {
+      width: 70%;
+      position: relative;
+      left: 15%; right: 0;
+    }
+    .carousel-control {
+      padding-top: 120px;
+    }
+    .carousel-control i {
+      color: #3c763d;
+    }
+    .carousel-indicators li {
+      border-color: #3c763d;
+    }
+    .carousel-indicators li.active {
+      background-color: #3c763d;
+    }
+  </style>
+
+  <div class="box-spacing">
+    <div id="carousel-example" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example" data-slide-to="1"></li>
+        <li data-target="#carousel-example" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="carousel-caption">
+            <h3>Slide 01</h3>
+            <p>Trocar experiências e fazer uma rede dinâmica e viva.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="carousel-caption">
+            <h3>Slide 02</h3>
+            <p>Trocar experiências e fazer uma rede dinâmica e viva.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="carousel-caption">
+            <h3>Slide 03</h3>
+            <p>Trocar experiências e fazer uma rede dinâmica e viva.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+        <i class="icons-outline icons-outline-arrow-left"></i>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example" data-slide="next">
+        <i class="icons-outline icons-outline-arrow-right"></i>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+  </div>
+
+  <h2>Como usar</h2>
+  <p>O Carousel é indicado por um <i>id</i>, neste caso, estamos usando <i>id="carousel-example"</i>.</p>
+  <p>Ele é composto por vários <i>itens</i> que alternam a visualização entre si. Um dos itens deve conter a classe <i>active</i> para indicar o item que irá começar a ser visualizado inicialmente.</p>
+  <p>É opcional que o Carousel tenha os <i>indicators</i> e <i>controls</i>.</p>
+  <p>Os <i>indicatores</i> servem para indicar o item atual que está sendo exibido no Carousel, e pode ser usado a partir dos atributos: <i>data-target</i>, indicando o <i>id</i> do Carousel, e <i>data-slide-to</i>, com o número do item do Carousel.</p>
+  <p>Os <i>controls</i> podem ser para esquerda ou direita e servem para passar ou voltar um item. Eles podem ser usados a partir do atributo <i>data-slide</i> com o valor <i>next</i> ou <i>prev</i>. Além disso, o link deve conter o <i>href</i> apontando o <i>id</i> do Carousel, com a classe <i>left</i> ou <i>right</i>.</p>
+  <p>Veja o código abaixo:</p>
+
+  <div id="tabs--components-carousel">
+
+    <div class="tab">
+      <input type="radio" id="tab--components-carousel--html" name="tab--components-carousel" checked>
+      <label for="tab--components-carousel--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;div id="carousel-example" class="carousel slide" data-ride="carousel"&gt;
+  &lt;!-- Wrapper for slides --&gt;
+  &lt;div class="carousel-inner"&gt;
+    &lt;div class="item active"&gt;
+      &lt;div class="carousel-caption"&gt;
+        &lt;h3&gt;Slide 01&lt;/h3&gt;
+        &lt;p&gt;Trocar experiências e fazer uma rede dinâmica e viva.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="item"&gt;
+      &lt;div class="carousel-caption"&gt;
+        &lt;h3&gt;Slide 02&lt;/h3&gt;
+        &lt;p&gt;Trocar experiências e fazer uma rede dinâmica e viva.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="item"&gt;
+      &lt;div class="carousel-caption"&gt;
+        &lt;h3&gt;Slide 03&lt;/h3&gt;
+        &lt;p&gt;Trocar experiências e fazer uma rede dinâmica e viva.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Controls --&gt;
+  &lt;a class="left carousel-control" href="#carousel-example" data-slide="prev"&gt;
+    &lt;span class="sr-only"&gt;Anterior&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class="right carousel-control" href="#carousel-example" data-slide="next"&gt;
+    &lt;span class="sr-only"&gt;Próximo&lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;!-- Indicators --&gt;
+  &lt;ol class="carousel-indicators"&gt;
+    &lt;li data-target="#carousel-example" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+    &lt;li data-target="#carousel-example" data-slide-to="1"&gt;&lt;/li&gt;
+    &lt;li data-target="#carousel-example" data-slide-to="2"&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <p>*Este componente é o mesmo do bootstrap, sem alterações significativas</p>
+  <p>Mais informações em: <a href="http://getbootstrap.com/javascript/#carousel" target="_blank">Bootstrap Carousel</a></p>
+
+</article>
