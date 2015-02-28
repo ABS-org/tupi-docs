@@ -1,0 +1,105 @@
+---
+layout: interna
+title: Formulários
+---
+{% include submenu-styles.html %}
+
+<article class="content">
+  <h1>Formulários</h1>
+  <p>Os formulários podem ter diversos estilos e tamanhos.</p>
+
+  <h2>Estilos</h2>
+
+  <div class="box-spacing">
+    <form>
+      <div class="form-group has-success">
+        <label class="control-label" for="inputSuccess1">Input with success</label>
+        <input type="text" class="form-control" id="inputSuccess1">
+      </div>
+      <div class="form-group has-warning">
+        <label class="control-label" for="inputWarning1">Input with warning</label>
+        <input type="text" class="form-control" id="inputWarning1">
+      </div>
+      <div class="form-group has-error">
+        <label class="control-label" for="inputError1">Input with error</label>
+        <input type="text" class="form-control" id="inputError1">
+      </div>
+      <div class="has-success">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="checkboxSuccess" value="option1">
+            Checkbox with success
+          </label>
+        </div>
+      </div>
+      <div class="has-warning">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="checkboxWarning" value="option1">
+            Checkbox with warning
+          </label>
+        </div>
+      </div>
+      <div class="has-error">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="checkboxError" value="option1">
+            Checkbox with error
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <h2>Tamanhos</h2>
+  <div class="box-spacing">
+    <div class="bs-example bs-example-control-sizing" data-example-id="form-control-height-sizes">
+      <form>
+        <div class="controls">
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Normal">
+          </div>
+
+          <div class="form-group">
+            <input class="form-control input-lg" type="text" placeholder=".input-lg">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <h2>Como aplicar</h2>
+  <p>Para os estilos, basta usar as classes <i>has-success</i>, <i>has-warning</i> ou <i>has-error</i> no elemento que envolve o input, checkbox ou textarea</p>
+  <p>Para aplicar os tamanhos, basta inserir a classe <i>input-lg</i> para que o input tenha o tamanho grande.</p>
+  <p>Veja os exemplos no código abaixo:</p>
+
+  <div id="tabs--styles-forms">
+
+    <div class="tab">
+      <input type="radio" id="tab--styles-forms--html" name="tab--styles-forms" checked>
+      <label for="tab--styles-forms--html">HTML</label>
+
+      <div class="content-tab">
+        <pre class="prettyprint lang-html linenums">
+&lt;!-- Estilos --&gt;
+&lt;div class="form-group has-success"&gt;
+  &lt;input type="text" class="form-control"&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-warning"&gt;
+  &lt;input type="text" class="form-control"&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-error"&gt;
+  &lt;input type="text" class="form-control"&gt;
+&lt;/div&gt;
+
+&lt;!-- Input Normal --&gt;
+&lt;input class="form-control" type="text"&gt;
+&lt;!-- Input Grande --&gt;
+&lt;input class="form-control input-lg" type="text"&gt;
+        </pre>
+      </div>
+    </div>
+  </div>
+
+
+</article>
